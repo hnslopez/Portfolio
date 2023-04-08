@@ -1,0 +1,17 @@
+@font-size-base: 15px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 13px;
+
+
+.prueba.ant-menu-item-selected{
+    background-color: @body-background !important;
+    color: @text-color;
+    
+    &::after {
+       // opacity: 0!important;
+        border-right: @border-width-base @border-style-base @border-color-split;
+      }
+
+
+  }
+ // @layout-header-background: @layout-footer-background;

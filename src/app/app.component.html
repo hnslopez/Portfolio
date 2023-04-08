@@ -1,0 +1,13 @@
+<nz-layout class="app-layout px-0 min-vh-100">
+  <nz-sider class="menu-sidebar" nzCollapsible [nzWidth]="!isCollapsed? '256px':'80px'" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed && !isMobile" [nzCollapsedWidth]="isMobile ? 0 : 80"
+    [nzTrigger]="null">
+    <app-sidebar [isCollapsed]="isCollapsed" [isMobile]="isMobile" (isCollapsedChanged)="onIsCollapsedChanged($event)" class="sidebar-container"></app-sidebar>
+  </nz-sider>
+  <nz-layout>
+    <app-navbar *ngIf="showNavbar" [isCollapsed]="isCollapsed" [isMobile]="isMobile" (toggleCollapsed)="onToggleSidebar($event)"></app-navbar>
+    <nz-content class="container my-4">
+      <router-outlet></router-outlet>
+    </nz-content>
+    <app-footer class="footer"></app-footer>
+  </nz-layout>
+</nz-layout>

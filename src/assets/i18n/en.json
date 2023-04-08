@@ -1,0 +1,64 @@
+{
+    "header": {
+        "title": "Task Management System",
+        "user": {
+            "dropdown": {
+                "profile": {
+                    "title": "Profile",
+                    "view": "View Profile",
+                    "edit": "Edit Profile",
+                    "myAccount": "My Account",
+                    "notifications": "Notifications",
+                    "recentActivity": "Recent Activity"
+                },
+                "settings": {
+                    "title": "Settings",
+                    "changePassword": "Change Password",
+                    "preferences": "Preferences",
+                    "privacy": "Privacy",
+                    "security": "Security"
+                },
+                "help": {
+                    "title": "Help",
+                    "faq": "FAQ",
+                    "documentation": "Documentation"
+                },
+                "logout": "Logout"
+            }
+        }
+    },
+    "home": {
+        "title": "Management System",
+        "description": "This system allows you to effectively and efficiently manage and track your tasks, as well as other functionalities.",
+        "button_repositoty": "REPOSITORY",
+        "information": {
+            "express": "Express was used as the backend framework to create and manage routes using a RESTful API.",
+            "angular": "Angular was employed to develop the user interface, with reusable components and a router for smooth navigation.",
+            "mongodb": "MongoDB as a NoSQL database to store the data of tasks and users."
+        }
+    },
+    "tasks": {
+        "title": "Task List",
+        "add": "Add Task",
+        "edit": "Edit Task",
+        "delete": "Delete Task",
+        "completed": "Task completed",
+        "not_completed": "Task not completed",
+        "no_tasks": "No tasks added yet.",
+        "form": {
+            "name": "Name",
+            "description": "Description",
+            "due_date": "Due Date",
+            "completed": "Completed"
+        }
+    },
+    "settings": {
+        "title": "Settings",
+        "language": "Language",
+        "theme": {
+            "dark": "Dark Mode",
+            "default": "Light Mode"
+        },
+        "save": "Save"
+    }
+}

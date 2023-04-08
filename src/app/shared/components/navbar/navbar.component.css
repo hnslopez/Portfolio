@@ -1,0 +1,117 @@
+:host {
+    display: flex;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:host .app-layout {
+    height: 100vh;
+}
+
+:host nz-header {
+    padding: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+:host .app-header {
+    position: relative;
+    height: 64px;
+    padding: 0;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+}
+
+.navbar {
+    --bs-navbar-padding-y: 0;
+
+}
+
+:host .header-trigger {
+    height: 64px;
+    padding: 0px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s, padding 0s;
+}
+
+:host nz-content {
+    margin: 24px;
+}
+
+:host .inner-content {
+    padding: 24px;
+    height: 100%;
+}
+
+.menu-container {
+    height: 100%;
+    padding: 24px;
+    background-color: #001529;
+}
+
+.menu-container ul {
+    height: 100%;
+}
+
+
+.nav-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: space-between
+}
+
+nz-badge {
+    margin: 0 25px 0 25px;
+}
+
+nz-badge.ant-badge-rtl {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+
+.nav-right {
+    padding-right: 2rem;
+
+}
+
+:host .bell-icon {
+    height: 64px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .3s, padding 0s;
+}
+
+.anticon {
+    vertical-align: 0;
+}
+
+
+.trigger {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.trigger:hover {
+    opacity: 1;
+}
+
+.nav-center{
+ margin-right: auto;   
+}
+
+.navbar-transparent{
+    background-color: transparent;
+}
+
+
+
+:host ::ng-deep ul.ant-menu.ant-menu-root.ant-menu-light.ant-menu-horizontal{
+    border: 0;
+}
+
+:host ::ng-deep li::after{
+    display:none!important;
+  }
+  

@@ -1,0 +1,11 @@
+#icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s, padding 0s;
+    display: inline-flex;
+}
+
+
+[nz-select-arrow] .ant-select-arrow {
+    transform: rotate(180deg);
+}
