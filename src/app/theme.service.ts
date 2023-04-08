@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeType } from './shared/enum';
-
+ 
 /**
  * Servicio encargado del manejo de temas.
  */

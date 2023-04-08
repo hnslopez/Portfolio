@@ -1,9 +1,7 @@
 <nz-layout class="app-layout px-0 min-vh-100">
   <nz-layout>
-    <app-navbar *ngIf="showNavbar" [isCollapsed]="isCollapsed" [isMobile]="isMobile" (toggleCollapsed)="onToggleSidebar($event)"></app-navbar>
     <nz-content class="container my-4">
       <router-outlet></router-outlet>
     </nz-content>
-    <app-footer class="footer"></app-footer>
   </nz-layout>
 </nz-layout>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './features/home/main/home.component';
+import { HomeComponent } from './features/home/home.component';
 
 const routes: Routes = [
   {
@@ -8,8 +8,7 @@ const routes: Routes = [
     pathMatch: 'full',
     data: { title: 'Home' },
     component: HomeComponent
-  },
-
+  }
 ];
 
 @NgModule({
