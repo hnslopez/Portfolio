@@ -3,7 +3,6 @@ import { Router, NavigationEnd } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { MenuSection } from 'src/app/core/models/menu-section.model';
 import { ThemeService } from 'src/app/theme.service';
-import { menuItems } from '../../data/menu-items.data';
 import { ThemeType } from '../../enum';
 
 @Component({
@@ -18,7 +17,6 @@ export class SidebarComponent implements OnInit{
   @Input() isCollapsed = false;
   @Input() isMobile = false;
   @Output() isCollapsedChanged = new EventEmitter<boolean>();
-  menuItems = menuItems;
   currentPath!: string;
   public ThemeType = ThemeType; 
   nzSelected= false;
