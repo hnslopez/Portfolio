@@ -36,13 +36,24 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { IconsProviderModule } from './icon-provider.module';
+import { AboutComponent } from './features/about/about.component';
+import { SkillsComponent } from './features/skills/skills.component';
+import { ProjectsComponent } from './features/projects/projects.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { NzAnchorModule } from 'ng-zorro-antd/anchor';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +90,7 @@ registerLocaleData(en);
     NzSegmentedModule,
     NzToolTipModule,
     NzPopoverModule,
+    NzAnchorModule
 
   ],
   providers: [AppInitializerProvider,

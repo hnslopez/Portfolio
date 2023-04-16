@@ -1,7 +1,31 @@
 <nz-layout class="app-layout px-0 min-vh-100">
   <nz-layout>
-    <nz-content class="container my-4">
-      <router-outlet></router-outlet>
+    <nz-anchor nzCurrentAnchor="#about">
+      <nz-link nzHref="#about" nzTitle="Basic demo"></nz-link>
+      <nz-link nzHref="#components-anchor-demo-static" nzTitle="Static demo"></nz-link>
+      <nz-link nzHref="#api" nzTitle="API">
+        <nz-link nzHref="#nz-anchor" nzTitle="nz-anchor"></nz-link>
+        <nz-link nzHref="#skills" nzTitle="skills"></nz-link>
+      </nz-link>
+    </nz-anchor>
+    <nz-content class="container">
+      <app-home></app-home>
+      <nz-divider></nz-divider>
+      <app-about id="about" ></app-about>
+      <nz-divider></nz-divider>
+      <app-skills></app-skills>
+      <nz-divider></nz-divider>
+      <app-skills></app-skills>
+      <nz-divider></nz-divider>
+      <app-skills></app-skills>
+      <nz-divider></nz-divider>
+      <app-skills></app-skills>
+      <nz-divider></nz-divider>
+      <app-skills></app-skills>
+      <nz-divider></nz-divider>
+      <app-skills id="skills"></app-skills>
+      <nz-divider></nz-divider>
+
     </nz-content>
   </nz-layout>
 </nz-layout>
