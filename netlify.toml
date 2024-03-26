@@ -1,0 +1,20 @@
+# Este es un comentario en el archivo netlify.toml
+
+# Definición de la versión de la configuración de Netlify
+[build]
+  command = "npm run build --prod"  # Comando para construir tu sitio
+
+
+
+# Configuración de encabezados de seguridad (opcional)
+[[headers]]
+  for = "/*"                 # Aplicar a todas las rutas
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+
+# Configuración de variables de entorno (opcional)
+[context.production]
+  NODE_ENV = "production"
+
+[context.branch-deploy]
+  NODE_ENV = "development"
