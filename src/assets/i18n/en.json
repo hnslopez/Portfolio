@@ -1,3 +1,12 @@
 {
-    
-}
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "resume": "Resume",
+      "skills": "Skills",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  }
+  

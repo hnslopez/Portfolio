@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from 'express';
+import { Application } from '@splinetool/runtime';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit{
   title = 'frontend';
 
   constructor(public translate: TranslateService) {
     let defaultLenguage = localStorage.getItem('locale') || 'es';
+
 
     if (!['es', 'en'].includes(defaultLenguage)) {
       defaultLenguage = 'es';
@@ -21,4 +23,11 @@ export class AppComponent {
 
     translate.setDefaultLang(defaultLenguage || 'es');
   }
+
+  ngOnInit(): void {
+    const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+    const app = new Application(canvas);
+    app.load('https://prod.spline.design/DrkSoSj95LUVvfbh/scene.splinecode');
+}
+
 }

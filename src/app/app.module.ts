@@ -42,6 +42,7 @@ import { ProjectsComponent } from './features/projects/projects.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { NzAnchorModule } from 'ng-zorro-antd/anchor';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 
 registerLocaleData(en);
 
@@ -53,7 +54,8 @@ registerLocaleData(en);
     SkillsComponent,
     ProjectsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

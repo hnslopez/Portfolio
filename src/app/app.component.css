@@ -1,0 +1,9 @@
+canvas{
+    position:absolute;
+    left:0;
+    top:0;
+  }
+
+.text{
+    z-index: 1;
+}
