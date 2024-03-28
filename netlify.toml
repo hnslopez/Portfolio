@@ -8,10 +8,9 @@
 
 # Configuración de encabezados de seguridad (opcional)
 [[headers]]
-  for = "/*"
+  for = "/*"                 # Aplicar a todas las rutas
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://prod.spline.design;"
-
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
 
 # Configuración de variables de entorno (opcional)
 [context.production]
