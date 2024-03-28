@@ -4,6 +4,12 @@ canvas{
     top:0;
   }
 
-.text{
+.element-front{
     z-index: 1;
+    pointer-events: none;
 }
+
+.element-front-action{
+  z-index: 1;
+}
+

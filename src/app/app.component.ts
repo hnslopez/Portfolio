@@ -23,6 +23,11 @@ export class AppComponent  implements OnInit{
 
     translate.setDefaultLang(defaultLenguage || 'es');
   }
+  public switchLanguage(language: 'es' | 'en'): void {
+    localStorage.setItem('locale', language);
+    this.translate.use(language);
+  }
+
 
   ngOnInit(): void {
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;

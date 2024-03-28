@@ -43,6 +43,10 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { NzAnchorModule } from 'ng-zorro-antd/anchor';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { CardComponent } from './shared/components/card/card.component';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 registerLocaleData(en);
 
@@ -55,7 +59,9 @@ registerLocaleData(en);
     ProjectsComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CardComponent
+
   ],
   imports: [
     BrowserModule,
@@ -92,7 +98,10 @@ registerLocaleData(en);
     NzSegmentedModule,
     NzToolTipModule,
     NzPopoverModule,
-    NzAnchorModule
+    NzAnchorModule,
+    NzTypographyModule,
+    NzIconModule,
+    NzNotificationModule
 
   ],
   providers: [AppInitializerProvider,
