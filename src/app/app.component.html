@@ -7,10 +7,11 @@
       <!--<app-navbar class="mb-auto text"></app-navbar> -->
 
       <app-navbar class="element-front py-3 px-4"></app-navbar>
-      <app-home class="px-3 element-front">
-      </app-home>
-      <footer class="mt-auto text-white-50 element-front">
-        <app-footer></app-footer>
+      <div class="inner-content px-3 element-front">
+        <router-outlet></router-outlet>
+      </div>
+      <footer class="mt-auto text-white-50">
+        <app-footer class="element-front-action"></app-footer>
       </footer>
     </div>
 

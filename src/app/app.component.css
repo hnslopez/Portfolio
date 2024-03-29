@@ -3,13 +3,3 @@ canvas{
     left:0;
     top:0;
   }
-
-.element-front{
-    z-index: 1;
-    pointer-events: none;
-}
-
-.element-front-action{
-  z-index: 1;
-}
-
