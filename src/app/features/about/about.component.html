@@ -1,13 +1,123 @@
 <div class="row">
-    <div class="col-md-7">
-        <h2 nz-typography class="fw-normal lh-1">Acerca de mí</h2>
-        <p class="lead">Soy un desarrollador Full Stack con experiencia en el desarrollo de aplicaciones web y backend utilizando diferentes tecnologías como Express, Angular y MongoDB. Me gradué como Analista Programador y actualmente estoy estudiando Ingeniería en Informática con mención en Data Science. Como autodidacta, aprendí a programar en NodeJS y comencé a desarrollar bots de Discord y páginas web.</p>
-            <p class="lead">
-                Con el tiempo, he adquirido habilidades en modelamiento de bases de datos relacionales y no relacionales, API RESTful y front-end, permitiéndome desarrollar soluciones personalizadas y satisfacer las necesidades de mis clientes.
+  <div class="col-md-7 my-auto">
+    <h2 nz-typography class="fw-normal lh-1">Acerca de mí</h2>
+    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto cumque a!
+      Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto, sapiente..
+    </p>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore nihil
+      magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!
+    </p>
+    <ng-container *ngIf="companies.length > 0">
+      <button *ngFor="let company of companies" class="element-front-action justify-content-center float-md-end"
+        nz-button nzType="text" (click)="showJobs(company)">
+        {{ company.title | translate }}
+        <span nz-icon nzType="right"></span>
+      </button>
+    </ng-container>
+  </div>
+  <ng-container *ngIf="selectedCompany">
 
-            </p>
+    <nz-list nzGrid >
+      <div nz-row [nzGutter]="16">
+        <div nz-col [nzXXl]="11" [nzXl]="4" [nzLg]="6" [nzMd]="12" [nzSm]="12" [nzXs]="26" *ngFor="let works of selectedCompany.works">
+          <nz-list-item >
+    
+              <nz-list-item-meta class="mb-0">
+                <nz-list-item-meta-title>
+                  <p>{{ works.title  | translate}}</p>
+                </nz-list-item-meta-title>
+                <nz-list-item-meta-description>
+                 <p>{{ selectedCompany.title | translate }}
+                  <nz-divider nzType="vertical"></nz-divider>
+                  {{ works.date  | translate}}</p>
+                </nz-list-item-meta-description>
+              </nz-list-item-meta>
+              <p>{{works.description | translate}}</p>
+              <ul nz-list-item-actions>
+                <nz-list-item-action *ngFor="let tag of works.tags">
+                  <p>
+                    {{ tag  | translate}}
+                  </p>
+                </nz-list-item-action>
+              </ul>
+              <nz-list-item-extra>
+              </nz-list-item-extra>
+  
+
+
+
+          </nz-list-item>
+        </div>
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-      </div>
+    </nz-list>
+
+  </ng-container>
+
+
+
+
+  <!--
+  <ng-template [ngTemplateOutlet]="outlet" [ngOutletContext]="context">
+    
+    <nz-list *ngFor="let works of company.works" nzItemLayout="vertical">
+      <nz-list-item>
+        <nz-list-item-meta>
+          <nz-list-item-meta-title>
+            <a>{{ works.title }}</a>
+          </nz-list-item-meta-title>
+          <nz-list-item-meta-description>
+            {{ works.description }}
+          </nz-list-item-meta-description>
+        </nz-list-item-meta>
+        {{ works.title }}
+        <ul nz-list-item-actions>
+          <nz-list-item-action>
+            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+            156
+          </nz-list-item-action>
+          <nz-list-item-action>
+            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+            156
+          </nz-list-item-action>
+          <nz-list-item-action>
+            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
+            2
+          </nz-list-item-action>
+        </ul>
+        <nz-list-item-extra>
+          <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
+        </nz-list-item-extra>
+      </nz-list-item>
+    </nz-list>
+  </ng-template>
+
+
+
+
+      <ng-container *ngIf="'about.jobs' | translate as jobs">
+
+
+      <app-card *ngFor="let job of jobs" [title]="job.company" [footer]="true" [extra]="true" nz-col>
+      <ng-container extra>
+        {{job.date}}
+      </ng-container>
+      <ng-container description>
+        <p nz-typography nzEllipsis nzType="secondary">
+          {{job.title}}
+        </p>
+      </ng-container>
+      
+
+      <p nz-typography>{{job.description}} </p>
+
+    <ng-container footer>
+
+        <app-tag *ngFor="let tag of job.info">
+          {{ tag }}
+        </app-tag>
+      </ng-container>
+    </app-card>
+  </ng-container>
+   -->
 </div>

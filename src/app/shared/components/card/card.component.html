@@ -1,11 +1,31 @@
-<nz-card style="width: 100%;" nzTitle="Card title" [nzExtra]="extraTemplate">
-    content
+<!-- 
+<nz-ribbon nzText="Hippies">
+</nz-ribbon>-->
+<nz-card nzHoverable [nzTitle]="extra?titleTemplate: undefined" [style.width.px]="size ? size : null" [nzExtra]="extra?extraTemplate : undefined"
+[nzCover]="coverTemplate" [routerLink]="route" [nzActions]="footer? [actionTask]: []">
+    <nz-card-meta [nzTitle]="!extra? titleTemplate:null" [nzDescription]="descriptionTemplate"></nz-card-meta>
+    <ng-content></ng-content>
+    <ng-template #coverTemplate>
+
+
+      <img nz-image  *ngIf ="imageUrl" alt="{{ alt }}" [src]="imageUrl" />
+    </ng-template>
   </nz-card>
+
+
+  <ng-template #titleTemplate>
+   <ng-container>{{title}}</ng-container> 
+  </ng-template>
+  
+
+  <ng-template #descriptionTemplate>
+    <ng-content select="[description]"></ng-content>
+  </ng-template>
+
   <ng-template #extraTemplate>
-    <nz-card-tab>
-        <nz-tabset nzSize="large">
-          <nz-tab nzTitle="tab1"></nz-tab>
-          <nz-tab nzTitle="tab2"></nz-tab>
-        </nz-tabset>
-      </nz-card-tab>
+    <ng-content select="[extra]"></ng-content>
+  </ng-template>
+
+  <ng-template #actionTask>
+    <ng-content select="[footer]"></ng-content>
   </ng-template>

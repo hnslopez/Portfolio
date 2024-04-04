@@ -47,6 +47,8 @@ import { CardComponent } from './shared/components/card/card.component';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { TagComponent } from './shared/components/tag/tag.component';
+import { NzTagModule } from 'ng-zorro-antd/tag';
 
 registerLocaleData(en);
 
@@ -60,7 +62,8 @@ registerLocaleData(en);
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
-    CardComponent
+    CardComponent,
+    TagComponent
 
   ],
   imports: [
@@ -101,7 +104,8 @@ registerLocaleData(en);
     NzAnchorModule,
     NzTypographyModule,
     NzIconModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzTagModule
 
   ],
   providers: [AppInitializerProvider,
