@@ -11,7 +11,7 @@
   "about": {
     "jobs": [
       {
-        "title": "ACTIONHUB | BANCOESTADO",
+        "title": "ACTIONHUB - BANCOESTADO",
         "works": [
           {
             "date": "Agosto 2023 - Diciembre 2023",
@@ -46,7 +46,7 @@
           {
             "date": "2022 - 2022",
             "title": "Desarrollador Fullstack",
-            "description": "Lideré un proyecto de gestión de alumnos y actividades para el Centro de Innovación y Transferencia Tecnológica. Este proyecto se destacó por la implementación de la metodología Scrum, optimizando la colaboración y eficiencia del equipo. Utilicé NestJS y MongoDB para el backend, asegurando una gestión de datos robusta y escalable, mientras que para el frontend, apliqué Vue.js,",
+            "description": "Lideré un proyecto de gestión de alumnos y actividades para el Centro de Innovación y Transferencia Tecnológica. Este proyecto se destacó por la implementación de la metodología Scrum, optimizando la colaboración y eficiencia del equipo. Utilicé NestJS y MongoDB para el backend, asegurando una gestión de datos robusta y escalable, mientras que para el frontend, apliqué Vue.js.",
             "tags": [
               "Scrum",
               "NestJS",
@@ -121,6 +121,11 @@
           }
         ]
       }
-    ]
+    ],
+    "button":{
+      "all":"TODOS"
+    }
+
+
   }
 }

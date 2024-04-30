@@ -1,4 +1,36 @@
-
 .ant-list-item-action {
-margin-left: 0;
+    margin-left: 0;
 }
+
+.vertical {
+    position: absolute;
+    height: 100%;
+}
+
+
+
+@media (min-width: 992px)  {
+    .col-md-0-5{
+        overflow-y: auto;
+        width: 3.3333333%
+    }
+
+    .col-md-5-5{
+        overflow-y: auto;width: 46.666667%;
+    }
+    
+ }
+
+
+
+ .ant-list-item-action-split.ng-star-inserted{
+    margin-top: -14px!important;
+
+ }
+
+ .anchor-position{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+ }
+

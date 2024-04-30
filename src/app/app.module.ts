@@ -49,6 +49,13 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { TagComponent } from './shared/components/tag/tag.component';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {CdkVirtualScrollViewport} from "@angular/cdk/scrolling";
+import { NzAffixModule } from 'ng-zorro-antd/affix';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzTimelineModule } from 'ng-zorro-antd/timeline';
+import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 
 registerLocaleData(en);
 
@@ -105,8 +112,14 @@ registerLocaleData(en);
     NzTypographyModule,
     NzIconModule,
     NzNotificationModule,
-    NzTagModule
-
+    NzTagModule,
+    NzSpaceModule,
+    CdkVirtualScrollViewport,
+    ScrollingModule,
+    NzAffixModule,
+    NzCarouselModule,
+    NzTimelineModule,
+    NzBackTopModule
   ],
   providers: [AppInitializerProvider,
     { provide: NZ_I18N, useValue: en_US }

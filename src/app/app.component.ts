@@ -30,9 +30,6 @@ export class AppComponent  implements OnInit{
 
 
   ngOnInit(): void {
-    const canvas = document.getElementById('canvas') as HTMLCanvasElement;
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/DrkSoSj95LUVvfbh/scene.splinecode');
 }
 
 }

@@ -1,123 +1,114 @@
 <div class="row">
-  <div class="col-md-7 my-auto">
-    <h2 nz-typography class="fw-normal lh-1">Acerca de mí</h2>
-    <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto cumque a!
-      Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto, sapiente..
-    </p>
-    <p class="lead">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore nihil
-      magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!
-    </p>
-    <ng-container *ngIf="companies.length > 0">
-      <button *ngFor="let company of companies" class="element-front-action justify-content-center float-md-end"
-        nz-button nzType="text" (click)="showJobs(company)">
-        {{ company.title | translate }}
-        <span nz-icon nzType="right"></span>
-      </button>
-    </ng-container>
-  </div>
-  <ng-container *ngIf="selectedCompany">
+  <div class="col-12 col-sm-12 col-md-4 col-xl-3 px-xl-2">
+    <section class="row">
+      
+      <app-card class="col-12 mb-2">
+        <h2 nz-typography class="fw-normal lh-1">Acerca de mí</h2>
+        <p nz-typography >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto cumque
+          a!
+          Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto, sapiente..
+        </p>
+        <p nz-typography>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore nihil
+          magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!
+        </p>
+      </app-card>
+      <app-card class="col-12">
+        <h2 nz-typography class="fw-normal lh-1">Tecnologías</h2>
+            <div>
+              <app-card>
+                <p>Card content</p>
+              </app-card>
+              <app-card>
+                <p>Card content</p>
+              </app-card>
+              <app-card >
+                <p>Card content</p>
+              </app-card>
+            </div>
+        <i class="fa-brands fa-node fa-2xl"></i>
+      </app-card>
 
-    <nz-list nzGrid >
-      <div nz-row [nzGutter]="16">
-        <div nz-col [nzXXl]="11" [nzXl]="4" [nzLg]="6" [nzMd]="12" [nzSm]="12" [nzXs]="26" *ngFor="let works of selectedCompany.works">
-          <nz-list-item >
-    
+    </section>
+
+  </div>
+  <div class="col-12 col-sm-12 col-md-8 col-xl-9 px-xl-2">
+    <nz-list nzGrid>
+      <div nz-row [nzGutter]="[16, 8]" >
+        <div  nz-col [nzSpan]="24" class="gutter-row" *ngFor="let company of companies;let i = index; let lastWork = last" >
+          <app-card  [title]="company.title"
+          [id]="transformarId(company.title)">
+          <div nz-col *ngFor="let works of company.works ">
+            <nz-list-item>
               <nz-list-item-meta class="mb-0">
                 <nz-list-item-meta-title>
-                  <p>{{ works.title  | translate}}</p>
+                  <p>{{ works.title | translate}} </p>
                 </nz-list-item-meta-title>
                 <nz-list-item-meta-description>
-                 <p>{{ selectedCompany.title | translate }}
-                  <nz-divider nzType="vertical"></nz-divider>
-                  {{ works.date  | translate}}</p>
+                  <p>{{ works.date | translate}}</p>
                 </nz-list-item-meta-description>
               </nz-list-item-meta>
               <p>{{works.description | translate}}</p>
               <ul nz-list-item-actions>
                 <nz-list-item-action *ngFor="let tag of works.tags">
                   <p>
-                    {{ tag  | translate}}
+                    {{ tag | translate}}
                   </p>
                 </nz-list-item-action>
               </ul>
               <nz-list-item-extra>
               </nz-list-item-extra>
-  
+            </nz-list-item>
+          </div>
+          <!--  <nz-divider *ngIf="!lastWork" ></nz-divider> -->
 
-
-
-          </nz-list-item>
+        </app-card>
         </div>
+
+
       </div>
     </nz-list>
-
-  </ng-container>
-
-
-
-
-  <!--
-  <ng-template [ngTemplateOutlet]="outlet" [ngOutletContext]="context">
-    
-    <nz-list *ngFor="let works of company.works" nzItemLayout="vertical">
-      <nz-list-item>
-        <nz-list-item-meta>
-          <nz-list-item-meta-title>
-            <a>{{ works.title }}</a>
-          </nz-list-item-meta-title>
-          <nz-list-item-meta-description>
-            {{ works.description }}
-          </nz-list-item-meta-description>
-        </nz-list-item-meta>
-        {{ works.title }}
-        <ul nz-list-item-actions>
-          <nz-list-item-action>
-            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
-            156
-          </nz-list-item-action>
-          <nz-list-item-action>
-            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
-            156
-          </nz-list-item-action>
-          <nz-list-item-action>
-            <span nz-icon nzType="star-o" style="margin-right: 8px;"></span>
-            2
-          </nz-list-item-action>
-        </ul>
-        <nz-list-item-extra>
-          <img width="272" alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
-        </nz-list-item-extra>
-      </nz-list-item>
-    </nz-list>
-  </ng-template>
-
-
-
-
-      <ng-container *ngIf="'about.jobs' | translate as jobs">
-
-
-      <app-card *ngFor="let job of jobs" [title]="job.company" [footer]="true" [extra]="true" nz-col>
-      <ng-container extra>
-        {{job.date}}
-      </ng-container>
-      <ng-container description>
-        <p nz-typography nzEllipsis nzType="secondary">
-          {{job.title}}
-        </p>
-      </ng-container>
-      
-
-      <p nz-typography>{{job.description}} </p>
-
-    <ng-container footer>
-
-        <app-tag *ngFor="let tag of job.info">
-          {{ tag }}
-        </app-tag>
-      </ng-container>
-    </app-card>
-  </ng-container>
-   -->
+  </div>
 </div>
+<!-- 
+  <nz-tabset nzTabPosition="left"  style="height: 500px">
+    <nz-tab   *ngFor="let company of companies" [nzTitle]="company.title">
+
+      <nz-list  nzGrid>
+        <div nz-row [nzGutter]="16">
+          <div nz-col [nzXs]="26" *ngFor="let works of company.works; let lastWork = last" [ngClass]="'limited-height-list'">
+
+            <nz-list-item >
+                <nz-list-item-meta class="mb-0">
+                  <nz-list-item-meta-title>
+                    <p>{{ company.title | translate }} </p>
+                  </nz-list-item-meta-title>
+                  <nz-list-item-meta-description>
+                    <p>{{ works.title  | translate}}
+                    <nz-divider nzType="vertical"></nz-divider>
+                    {{ works.date  | translate}}</p>
+                  </nz-list-item-meta-description>
+                </nz-list-item-meta>
+                <p>{{works.description | translate}}</p>
+                <ul nz-list-item-actions>
+                  <nz-list-item-action *ngFor="let tag of works.tags">
+                    <p>
+                      {{ tag  | translate}}
+                    </p>
+                  </nz-list-item-action>
+                </ul>
+                <nz-list-item-extra>
+                </nz-list-item-extra>
+            </nz-list-item>
+
+            <nz-divider *ngIf="!lastWork" ></nz-divider>
+
+          </div>
+   
+        </div>
+      </nz-list>
+  
+
+    </nz-tab>
+  </nz-tabset>
+-->

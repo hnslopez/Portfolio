@@ -7,13 +7,21 @@
 @font-size-sm: 11px;
 
 .anticon {
-  vertical-align: 0.125em;
+  vertical-align: 0.1em;
 }
 
 
-.ant-btn-link {
-  color: #ffffff;
+html, body{
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-attachment: fixed
 }
+
+ul.ant-menu.ant-menu-root.ant-menu-light{
+  background: transparent;
+
+}
+
+
 
 .element-front{
   z-index: 1;
@@ -25,7 +33,70 @@ z-index: 1;
 pointer-events: all;
 }
 
- //   @body-background: red;
+.ant-tabs-content-holder{
+  overflow: auto;
+}
+
+
+
+nz-link.ant-anchor-link.ant-anchor-link-active{
+  position: relative;
+  z-index: 2;
+  margin-left: -2px;
+  border-left: 2px solid #177ddc;
+  transition: top 0.3s ease-in-out;
+
+}
+
+
+.ant-anchor-ink-ball.visible{
+
+      left: 50%;
+      display: none;
+      background-color: @component-background;
+      border-left: 2px solid @primary-color;
+      margin-left: -2px;
+      transform: translateX(-50%);
+      transition: top 0.3s ease-in-out;
+
+
+    
+  }
+
+  em.ant-list-item-action-split.ng-star-inserted{
+    margin-top: -14px;
+
+  }
+
+  nz-card.ant-card.ant-card-bordered.ant-card-hoverable {  
+
+    border:none;
+  }
+  
+
+.color-border{
+    border-color: fade(@primary-color, 65%)!important;
+}
+  
+
+.border-end-ant{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(222, 181, 99, 0.85);
+  font-size: 13px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.ant-menu-horizontal{
+  border-bottom: 0px;
+}
+//   @body-background: #0c0c0c;
 
 /*
 // >>> Primary
