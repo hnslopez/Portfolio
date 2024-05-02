@@ -34,3 +34,7 @@
     left: 20px;
  }
 
+
+.ant-tabs-content-holder{
+    overflow: hidden!important;
+ }
