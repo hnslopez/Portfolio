@@ -46,7 +46,7 @@ export class AboutComponent {
           },
           {
             "name": "Ionic",
-            "icon": "fab fa-ionic"
+            "icon": "fab carbon--ionic"
           }
         ]
       },
