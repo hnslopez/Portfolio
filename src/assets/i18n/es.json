@@ -3,9 +3,12 @@
     "home": "Inicio",
     "about": "Sobre mí",
     "projects": "Proyectos",
-    "resume": "Currículum",
-    "skills": "Habilidades",
-    "portfolio": "Portafolio",
+    "cv_download": {
+      "name":"Descargar CV",
+      "pdf":"Formato PDF",
+      "docx":"Formato DOCX"
+    },
+
     "contact": "Contacto"
   },
   "about": {

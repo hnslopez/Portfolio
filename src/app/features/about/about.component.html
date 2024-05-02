@@ -24,18 +24,19 @@
             <div nz-row [nzGutter]="[10,10]">
               <div nz-col class="gutter-row" [nzSpan]="6" *ngFor="let technology of tecnologies[types];"
                 ngClass="h-100 w-100">
-                <button nz-button nzType="default" nz-popover nzBlock [nzPopoverContent]="contentTemplate" nzPopoverTrigger="click" nzPopoverPlacement="bottomLeft"
+                <button nz-button nzType="default" nz-popover nzBlock [nzPopoverContent]="contentTemplate"  nzPopoverPlacement="bottomLeft"
                   class="d-flex justify-content-center align-items-center">
                   <i [class]="technology.icon + ' fa-2xl'" *ngIf="technology.icon;"></i>
                 </button>
                 <ng-template #contentTemplate>
                   {{technology.name}}
                   <nz-list nzGrid *ngIf="technology.librariesFrameworks?.length > 0">
-                    <nz-divider></nz-divider>
+                    <h2 class="ant-card-meta-title">{{ 'libraries' | uppercase }}
+                    </h2>
                     <div nz-row [nzGutter]="[10,10]">
-                      <div nz-col class="gutter-row" [nzSpan]="6" *ngFor="let librariesFrameworks of technology.librariesFrameworks;"
+                      <div nz-col class="gutter-row" [nzSpan]="8" *ngFor="let librariesFrameworks of technology.librariesFrameworks;let i = index"
                         ngClass="h-100 w-100">
-                        <button nz-button nzType="default" nz-popover nzBlock [nzPopoverContent]="newContentTemplate" nzPopoverPlacement="bottomLeft"
+                        <button nz-button nzType="default" nz-popover nzBlock [nzPopoverContent]="newContentTemplate" [nzPopoverPlacement]="positions[i]"
                           class="d-flex justify-content-center align-items-center">
                           <i [class]="librariesFrameworks.icon + ' fa-2xl'" *ngIf="librariesFrameworks.icon;"></i>
                         </button>

@@ -24,6 +24,7 @@ export class AboutComponent {
 
   tecnoKeys: string[];
 
+  positions:any = ['topLeft','top','topRight','bottomLeft','bottom','bottomRight']
 
   tecnologies: any = {
     "programmingLanguages": [
@@ -34,7 +35,7 @@ export class AboutComponent {
         "librariesFrameworks": [
           {
             "name": "NestJS",
-            "icon": "fab fa-node-js"
+            "icon": "fab carbon--nestjs"
           },
           {
             "name": "Angular",
@@ -47,6 +48,14 @@ export class AboutComponent {
           {
             "name": "Ionic",
             "icon": "fab carbon--ionic"
+          },
+          {
+            "name": "Socket.io",
+            "icon": "fab carbon--socket-io"
+          },
+          {
+            "name": "Axios",
+            "icon": "fab carbon--axios"
           }
         ]
       },
@@ -57,19 +66,23 @@ export class AboutComponent {
         "librariesFrameworks": [
           {
             "name": "NestJS",
-            "icon": "fab fa-node-js"
+            "icon": "fab carbon--nestjs"
           },
           {
             "name": "Angular",
             "icon": "fab fa-angular"
           },
           {
+            "name": "NG-ZORRO",
+            "icon": "fab carbon--ant-zorro"
+          },
+          {
             "name": "Express",
-            "icon": "fas fa-server"
+            "icon": "fas carbon--express"
           },
           {
             "name": "Ionic",
-            "icon": "fab fa-ionic"
+            "icon": "fab carbon--ionic"
           }
         ]
       },
