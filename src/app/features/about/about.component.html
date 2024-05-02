@@ -28,8 +28,8 @@
               <ng-template #contentTemplate>
                 {{technology.name}}
                 <nz-list nzGrid *ngIf="technology.librariesFrameworks?.length > 0">
-                  <h2 class="ant-card-meta-title">{{'about.profile.libraries' | translate | uppercase }}
-                  </h2>
+                  <h3 class="ant-card-meta-title" style="font-size: 12px;">{{'about.profile.libraries' | translate | uppercase }}
+                  </h3>
                   <div nz-row [nzGutter]="[10,10]">
                     <div nz-col class="gutter-row" [nzSpan]="8"
                       *ngFor="let librariesFrameworks of technology.librariesFrameworks;let i = index"

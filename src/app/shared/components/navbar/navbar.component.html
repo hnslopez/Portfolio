@@ -20,9 +20,19 @@
         <i class="fa-regular fa-folder"></i>
         {{'navbar.projects' | translate | uppercase }}
       </li>
-      <li nz-menu-item>
-        <i class="fas fa-envelope"></i>
-        {{'navbar.contact' | translate | uppercase }}
+
+      <li nz-submenu [nzTitle]="'navbar.perfil' | translate | uppercase" nzIcon="mail" nzPlacement="bottomRight">
+        <ul>
+          <li nz-menu-item>LINKEDIN</li>
+          <li nz-menu-item>GITHUB</li>
+          <li nz-menu-item>TRAILHEAD</li>
+          <li nz-menu-divider></li>
+          <li nz-menu-group [nzTitle]="'navbar.contact' | translate | uppercase">
+            <ul>
+              <li nz-menu-item>MAIL</li>
+            </ul>
+          </li>
+        </ul>
       </li>
       <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
         style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}

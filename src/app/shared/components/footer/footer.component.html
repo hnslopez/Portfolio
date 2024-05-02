@@ -22,10 +22,17 @@
         </a>
         <nz-divider nzType="vertical"></nz-divider>
 
-        <button nz-button nzType="text" style="margin-bottom: 7px; padding: 0 20px;">
-          <i class="fa-solid fa-sun"></i>
-          <i class="fa-solid fa-moon"></i>
+      <button style="margin-bottom: 7px; padding: 0 20px;" nz-button nzType="text" *ngIf="(themeChanged$ | async) as themeType" (click)="toggleTheme();">
+        <span>
+          {{ ((themeChanged$ | async) === ThemeType.Dark ? "settings.theme.default" : "settings.theme.dark") | translate
+          }}
+        </span>
+        <span nz-icon>
+          <i *ngIf="themeType === ThemeType.Default" class="fas fa-moon"></i>
+          <i *ngIf="themeType === ThemeType.Dark" class="fas fa-sun"></i>
+        </span>
       </button>
+
       </span>
 
       <nz-divider nzType="vertical"></nz-divider>
