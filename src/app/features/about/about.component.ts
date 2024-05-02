@@ -100,6 +100,14 @@ export class AboutComponent {
           {
             "name": "Django",
             "icon": "fab fa-python"
+          },
+          {
+            "name":"Pandas",
+            "icon":"fab carbon--pandas"
+          },
+          {
+            "name":"Tensorflow",
+            "icon":"fab carbon--tensoflow"
           }
         ]
       },

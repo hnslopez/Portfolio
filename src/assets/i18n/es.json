@@ -1,14 +1,14 @@
 {
   "navbar": {
+    "fullstack":"Desarrollador Fullstack",
     "home": "Inicio",
     "about": "Sobre mí",
     "projects": "Proyectos",
     "cv_download": {
-      "name":"Descargar CV",
-      "pdf":"Formato PDF",
-      "docx":"Formato DOCX"
+      "name": "Descargar CV",
+      "pdf": "Formato PDF",
+      "docx": "Formato DOCX"
     },
-
     "contact": "Contacto"
   },
   "about": {
@@ -125,10 +125,20 @@
         ]
       }
     ],
-    "button":{
-      "all":"TODOS"
+    "profile": {
+      "about": "Acerca de mí",
+      "text": {
+        "paragraph_1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto\n          cumque\n          a!\n          Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto,\n          sapiente..",
+        "paragraph_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore\n          nihil\n          magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!\n"
+      },
+      "programming": {
+        "programmingLanguages": "Lenguajes de programación",
+        "databases": "Bases de datos",
+        "technologiesTools": "Herramientas y tecnologías",
+        "methodologies": "Metodologías",
+        "cloudTechnologies": "Tecnologías en la nube"
+      },
+      "libraries":"Librerías  y Frameworks"
     }
-
-
   }
 }

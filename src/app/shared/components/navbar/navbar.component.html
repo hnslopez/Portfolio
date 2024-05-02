@@ -3,7 +3,7 @@
     <h3 class="float-md-start mb-0">
       <span nz-typography>Hans López</span>
       <h6>
-        <span nz-typography nzType="secondary">Desarrollador Fullstack</span>
+        <span nz-typography nzType="secondary">{{'navbar.fullstack' | translate | uppercase }}</span>
       </h6>
     </h3>
 
@@ -25,7 +25,8 @@
         {{'navbar.contact' | translate | uppercase }}
       </li>
       <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
-        style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}</button>
+        style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}
+      </button>
       <nz-dropdown-menu #menu="nzDropdownMenu">
         <ul nz-menu>
           <li nz-menu-item>{{'navbar.cv_download.pdf' | translate | uppercase }}</li>

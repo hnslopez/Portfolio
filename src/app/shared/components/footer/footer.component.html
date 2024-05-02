@@ -20,7 +20,14 @@
         <a nz-button nzType="link" [href]="mail" target="_blank">
           Mail <span nz-icon nzType="mail" nzTheme="outline"></span>
         </a>
+        <nz-divider nzType="vertical"></nz-divider>
+
+        <button nz-button nzType="text" style="margin-bottom: 7px; padding: 0 20px;">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+      </button>
       </span>
+
       <nz-divider nzType="vertical"></nz-divider>
       <span>
         <nz-select  [nzSuffixIcon]='"up"' nzPlaceHolder="Language" [(ngModel)]="selectedValue" (ngModelChange)="languageChange($event)" nzBorderless>
@@ -30,3 +37,8 @@
     </div>
   </div>
   
+  <!-- 
+  <button nz-button nzType="text" style="margin-bottom: 7px; padding: 0 20px;">
+    <i class="fa-solid fa-sun"></i>
+    <i class="fa-solid fa-moon"></i>
+</button>-->
