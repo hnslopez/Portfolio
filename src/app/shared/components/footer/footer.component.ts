@@ -32,7 +32,7 @@ export class FooterComponent implements OnInit{
   constructor(private sanitizer:DomSanitizer, private app: AppComponent, private themeService: ThemeService,private notification: NzNotificationService, private translateService: TranslateService) { 
     this.linkedin = sanitizer.bypassSecurityTrustUrl('https://www.linkedin.com/in/hnslopez/');
     this.github = sanitizer.bypassSecurityTrustUrl('https://github.com/hnslopez');
-    this.mail = sanitizer.bypassSecurityTrustUrl('https://github.com/hnslopez');
+    this.mail = sanitizer.bypassSecurityTrustUrl('mailto:hans.lopezaranda@gmail.com');
     
 
   }

@@ -1,28 +1,20 @@
-<nz-layout class="d-flex">
-  <div class="d-flex">
-    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column ">
-      <div class="mb-auto"></div>
-      <!--<app-navbar class="mb-auto text"></app-navbar> -->
+<nz-layout class="container d-flex min-vh-100">
       <app-navbar class="my-4 px-2"></app-navbar>
-      
-      <div class="inner-content px-3">
+      <nz-content class="container mt-auto mb-auto d-flex flex-column justify-content-center">
         <router-outlet></router-outlet>
-      </div>
-      <footer class="mt-auto text-white-50">
+      </nz-content>
+      <nz-footer class="mt-auto text-white-50">
         <app-footer></app-footer>
-      </footer>
-    </div>
-  </div>
-
-  <nz-back-top [nzTemplate]="tpl" [nzVisibilityHeight]="150">
-    <ng-template #tpl>
-      <div class="border rounded h-100 w-100 d-flex justify-content-center align-items-center color-border ant-card-hoverable">
-        <span nz-icon nzType="up" style="font-size: 18px;"  nzTheme="outline"></span>
-      </div>
-    </ng-template>
-  </nz-back-top>
+      </nz-footer>
 </nz-layout>
 
+<nz-back-top [nzTemplate]="tpl" [nzVisibilityHeight]="150">
+  <ng-template #tpl>
+    <div class="border rounded h-100 w-100 d-flex justify-content-center align-items-center color-border ant-card-hoverable">
+      <span nz-icon nzType="up" style="font-size: 18px;"  nzTheme="outline"></span>
+    </div>
+  </ng-template>
+</nz-back-top>
 
 
 

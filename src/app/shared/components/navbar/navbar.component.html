@@ -7,44 +7,85 @@
       </h6>
     </h3>
 
-    <ul nz-menu nzMode="horizontal">
-      <li nz-menu-item>
-        <span nz-icon nzType="home" nzTheme="outline"></span>
-        {{'navbar.home' | translate | uppercase }}
-      </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="user" nzTheme="outline"></span>
-        {{'navbar.about' | translate | uppercase }}
-      </li>
-      <li nz-menu-item>
-        <i class="fa-regular fa-folder"></i>
-        {{'navbar.projects' | translate | uppercase }}
-      </li>
-
-      <li nz-submenu [nzTitle]="'navbar.perfil' | translate | uppercase" nzIcon="mail" nzPlacement="bottomRight">
-        <ul>
-          <li nz-menu-item>LINKEDIN</li>
-          <li nz-menu-item>GITHUB</li>
-          <li nz-menu-item>TRAILHEAD</li>
-          <li nz-menu-divider></li>
-          <li nz-menu-group [nzTitle]="'navbar.contact' | translate | uppercase">
-            <ul>
-              <li nz-menu-item>MAIL</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
-        style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}
-      </button>
-      <nz-dropdown-menu #menu="nzDropdownMenu">
-        <ul nz-menu>
-          <li nz-menu-item>{{'navbar.cv_download.pdf' | translate | uppercase }}</li>
-          <li nz-menu-item>{{'navbar.cv_download.docx' | translate | uppercase }}</li>
-        </ul>
-      </nz-dropdown-menu>
-    </ul>
-
+    <ng-container *ngIf="isMobile; then navbarMobile else navbarModel">
+    </ng-container>
 
   </div>
 </header>
+
+<ng-template #navbarMobile>
+  <nz-affix class="toc-affix" [nzOffsetTop]="120">
+    <button nz-button nzType="default" (click)="open()" style="margin-bottom: 6px;">
+      <span nz-icon [nzType]="isMobile ? 'menu-unfold' : 'menu-fold'"></span>
+    </button>
+  </nz-affix>
+
+  <nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  nzPlacement="right"
+  nzTitle="Basic Drawer"
+  (nzOnClose)="close()"
+>
+  <ng-container *nzDrawerContent>
+    <template *ngTemplateOutlet="navbarModel"></template>
+
+  </ng-container>
+</nz-drawer>
+</ng-template>
+
+
+<ng-template #navbarModel>
+  <ul nz-menu [nzMode]="isMobile? 'inline' : 'horizontal'" class="text-md-center" [ngClass]="isMobile? 'h-100':''" style="text-wrap: pretty;">
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['/','home']">
+        <span nz-icon nzType="home" nzTheme="outline"></span>
+        {{'navbar.home' | translate | uppercase }}
+      </a>
+    </li>
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['about']">
+        <span nz-icon nzType="user" nzTheme="outline"></span>
+        {{'navbar.about' | translate | uppercase }}
+      </a>
+
+    </li>
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['projects']">
+        <i class="fa-regular fa-folder"></i>
+        {{'navbar.projects' | translate | uppercase }}
+      </a>
+    </li>
+
+    <li nz-submenu [nzTitle]="'navbar.perfil' | translate | uppercase" nzIcon="mail" nzPlacement="bottomRight">
+      <ul>
+        <li nz-menu-item>
+          <a [href]="linkedin" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+        <li nz-menu-item>
+          <a [href]="github" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+        <li nz-menu-divider></li>
+        <li nz-menu-group [nzTitle]="'navbar.contact' | translate | uppercase">
+          <ul>
+            <li nz-menu-item>
+              <a [href]="mail" target="_blank" rel="noopener noreferrer">MAIL</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <button class="order-2" nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
+      style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}
+    </button>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item>
+          <a [href]="fileUrl" [attr.download]="'CV_HANS_LOPEZ_2024.pdf'"  target="_blank" rel="noopener noreferrer">
+      
+
+          {{'navbar.cv_download.pdf' | translate | uppercase }}
+        </a>
+        </li>
+        <li nz-menu-item>{{'navbar.cv_download.docx' | translate | uppercase }}</li>
+      </ul>
+    </nz-dropdown-menu>
+  </ul>
+</ng-template>

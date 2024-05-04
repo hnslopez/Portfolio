@@ -141,5 +141,11 @@
       },
       "libraries":"Librerías  y Frameworks"
     }
+  },
+  "settings":{
+    "theme":{
+      "default":"Claro",
+      "dark":"Oscuro"
+    }
   }
 }
