@@ -16,7 +16,7 @@
 <ng-template #navbarMobile>
   <nz-affix class="toc-affix" [nzOffsetTop]="120">
     <button nz-button nzType="default" (click)="open()" style="margin-bottom: 6px;">
-      <span nz-icon [nzType]="isMobile ? 'menu-unfold' : 'menu-fold'"></span>
+      <span nz-icon [nzType]="isOpen() ? 'menu-unfold' : 'menu-fold'"></span>
     </button>
   </nz-affix>
 

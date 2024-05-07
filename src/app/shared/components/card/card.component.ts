@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent {
   @Input() title!: string;
-  @Input() description!: string;
+  @Input() description!: HTMLElement;
   @Input() imageUrl!: string;
   @Input() alt!: string;
   @Input() route?: string;

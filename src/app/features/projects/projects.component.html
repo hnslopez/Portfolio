@@ -1,1 +1,46 @@
-<p>projects works!</p>
+<section class="mt-4">
+    <nz-divider [nzText]="'projects.github.title' | translate | uppercase" nzOrientation="left"></nz-divider>
+    <div class="row d-flex">
+        <ng-container *ngFor="let project of data | async">
+            <div class="col-12 col-md-4 col-xl-4 ps-1 pe-2 mb-2">
+                <app-card class="h-100" [title]="project.name" [footer]="true" [extra]="true">
+                    <section description>
+                        <p nz-typography nzEllipsis [nzEllipsisRows]="3">{{ project.description }}</p>
+                        <div footer class="mt-auto right-col d-flex flex-nowrap overflow-auto scroll-bar">
+                            <ng-container *ngFor="let tag of project.topics">
+                                <nz-tag class="mb-2" nzMode="default" nzColor="#00000000">{{ tag }}</nz-tag>
+                            </ng-container>
+                        </div>
+                    </section>
+                    <ng-container extra>
+                        <a class="d-flex justify-content-center align-items-center" target="_blank"
+                            [href]="project.html_url">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </ng-container>
+                </app-card>
+            </div>
+        </ng-container>
+    </div>
+</section>
+<section class="mt-4">
+    <nz-divider [nzText]="'projects.others.title' | translate | uppercase" nzOrientation="left"></nz-divider>
+    <div class="row d-flex">
+        <ng-container *ngFor="let project of projects">
+            <div class="col-12 col-md-4 col-xl-4 ps-1 pe-2 mb-2">
+                <app-card class="h-100" [title]="project.name" [imageUrl]="'/assets/image/'+project.image">
+                    <ng-container description>
+                        <p nz-typography nzEllipsis [nzEllipsisRows]="3">{{ project.description }}</p>
+                    </ng-container>
+                    <ng-container extra>
+                        <a class="d-flex justify-content-center align-items-center" target="_blank"
+                            [href]="project.html_url">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </ng-container>
+                </app-card>
+            </div>
+
+        </ng-container>
+    </div>
+</section>

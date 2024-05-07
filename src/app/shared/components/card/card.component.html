@@ -1,13 +1,12 @@
 <!-- 
 <nz-ribbon nzText="Hippies">
 </nz-ribbon>-->
-<nz-card nzHoverable [nzTitle]="extra?titleTemplate: undefined" [style.width.px]="size ? size : null" [nzExtra]="extra?extraTemplate : undefined"
-[nzCover]="coverTemplate" [routerLink]="route" [nzActions]="footer? [actionTask]: []">
+<nz-card nzHoverable [nzTitle]="extra?titleTemplate: undefined" class="h-100" [nzExtra]="extra?extraTemplate : undefined"
+[nzCover]="coverTemplate" [routerLink]="route">
     <nz-card-meta [nzTitle]="!extra? titleTemplate:null" [nzDescription]="descriptionTemplate"></nz-card-meta>
     <ng-content></ng-content>
+
     <ng-template #coverTemplate>
-
-
       <img nz-image  *ngIf ="imageUrl" alt="{{ alt }}" [src]="imageUrl" />
     </ng-template>
   </nz-card>
@@ -26,6 +25,3 @@
     <ng-content select="[extra]"></ng-content>
   </ng-template>
 
-  <ng-template #actionTask>
-    <ng-content select="[footer]"></ng-content>
-  </ng-template>

@@ -37,6 +37,10 @@ export class NavbarComponent{
     this.visible = false;
   }
 
+  isOpen():boolean{
+    return this.visible;
+  }
+
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth < 768;

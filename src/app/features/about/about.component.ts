@@ -227,8 +227,6 @@ export class AboutComponent {
 
     this.tecnoKeys = Object.keys(this.tecnologies);
 
-    console.log(this.tecnologies[this.tecnoKeys[0]])
-
     this.translate.get('about.jobs').subscribe((companies: any[]) => {
       this.companies = companies.map(company => ({
         ...company
@@ -242,7 +240,6 @@ export class AboutComponent {
 
 
   keyValues(index: number): string {
-    console.log(index)
     return Object.keys(this.tecnologies)[index];
   }
 

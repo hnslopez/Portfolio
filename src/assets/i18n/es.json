@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "fullstack":"Desarrollador Fullstack",
+    "fullstack": "Desarrollador Fullstack",
     "home": "Inicio",
     "about": "Sobre mí",
     "projects": "Proyectos",
@@ -139,13 +139,29 @@
         "methodologies": "Metodologías",
         "cloudTechnologies": "Tecnologías en la nube"
       },
-      "libraries":"Librerías  y Frameworks"
+      "libraries": "Librerías  y Frameworks"
     }
   },
-  "settings":{
-    "theme":{
-      "default":"Claro",
-      "dark":"Oscuro"
+  "projects": {
+    "github": {
+      "title": "Proyectos de Github"
+    },
+    "others": {
+      "title": "Proyectos Recientes Publicados",
+      "projects": [
+        {
+          "name": "Carbon Flama",
+          "html_url": "https://carbonflama.cl",
+          "description":"Sitio web creado para la venta de carbón por mayor, actualmente se encuentra en construcción.\n",
+          "image":"carbon-flama.png"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "theme": {
+      "default": "Claro",
+      "dark": "Oscuro"
     }
   }
 }
