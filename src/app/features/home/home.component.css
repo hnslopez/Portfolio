@@ -26,3 +26,22 @@ body {
 }
 
 
+
+.typing-text::after {
+  content: '';
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  animation: typing 5s steps(50, end);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

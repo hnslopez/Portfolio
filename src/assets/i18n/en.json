@@ -1,12 +1,169 @@
 {
-    "navbar": {
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects",
-      "resume": "Resume",
-      "skills": "Skills",
-      "portfolio": "Portfolio",
-      "contact": "Contact"
+  "navbar": {
+    "fullstack": "Fullstack Developer",
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "cv_download": {
+      "name": "Download CV",
+      "pdf": "PDF Format",
+      "docx": "DOCX Format"
+    },
+    "perfil": "Profiles",
+    "contact": "Contact"
+  },
+  "about": {
+    "jobs": [
+      {
+        "title": "ACTIONHUB - BANCOESTADO",
+        "works": [
+          {
+            "date": "August 2023 - December 2023",
+            "title": "Fullstack Developer",
+            "description": "I was hired to work directly on the development of an integrating API in the post-sale team for a duration of 5 months. The team specializes in using Salesforce and creating APIs/Microservices under the Scrum methodology. My main focus was on creating and developing the Integrating API, as well as developing various APIs/Microservices using Node.js and Express. Additionally, I worked with technologies like MongoDB, Lightning Web Components, and Salesforce Apex classes.",
+            "tags": [
+              "Javascript",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "Salesforce",
+              "Scrum"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "DUOC UC",
+        "works": [
+          {
+            "date": "2023 - 2024",
+            "title": "Fullstack Developer",
+            "description": "I led the creation of a scalable chatbot system to address the lack of an effective method for student inquiries. This system, implemented with artificial intelligence, facilitates natural language interaction, optimizing logistics and problem-solving. Key technologies employed include NestJS, PostgreSQL, Angular, Django, and natural language processing with TensorFlow.",
+            "tags": [
+              "NestJS",
+              "PostgreSQL",
+              "Angular",
+              "Django",
+              "TensorFlow"
+            ]
+          },
+          {
+            "date": "2022 - 2022",
+            "title": "Fullstack Developer",
+            "description": "I led a student and activities management project for the Center for Innovation and Technological Transfer. This project stood out for the implementation of the Scrum methodology, optimizing team collaboration and efficiency. I used NestJS and MongoDB for the backend, ensuring robust and scalable data management, while for the frontend, I applied Vue.js.",
+            "tags": [
+              "Scrum",
+              "NestJS",
+              "MongoDB",
+              "Vue.js"
+            ]
+          },
+          {
+            "date": "2020 - 2023",
+            "title": "Assistant Professor",
+            "description": "For three years, I served as an Assistant Professor, teaching SQL, PL/SQL, Python, and Java. During this period, I also provided comprehensive technical guidance, covering these programming languages and extending my expertise to others like JavaScript.",
+            "tags": [
+              "SQL",
+              "PL/SQL",
+              "Python",
+              "Java",
+              "JavaScript"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "BILBAO LABS",
+        "works": [
+          {
+            "date": "2021 - 2022",
+            "title": "Fullstack Developer",
+            "description": "I was responsible for developing and optimizing websites, employing technologies like PHP, Bootstrap, and JavaScript. My focus was on strengthening digital security, working collaboratively in multidisciplinary teams, introducing innovative functionalities, and ensuring efficient problem resolution to keep websites up-to-date with the latest trends and updates.",
+            "tags": [
+              "PHP",
+              "Bootstrap",
+              "JavaScript",
+              "JQuery",
+              "Mysql",
+              "Scrum",
+              "HTML",
+              "CSS"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "FREELANCER",
+        "works": [
+          {
+            "date": "2017 - 2019",
+            "title": "Fullstack Developer",
+            "description": "I developed highly customized bots for Discord, offering advanced functionalities such as permission systems, music management, user administration, and detailed activity logging. These bots significantly enhanced community experiences.",
+            "tags": [
+              "Node.js",
+              "Mysql",
+              "Angular",
+              "Electron.js",
+              "HTML",
+              "CSS",
+              "Bootstrap"
+            ]
+          },
+          {
+            "date": "2017 - 2019",
+            "title": "Fullstack Developer",
+            "description": "I developed both static and dynamic websites, applying technologies like Angular, Express, NestJS, Django, and Bootstrap. In addition to developing applications using Django and implementing intuitive interfaces with Bootstrap, ensuring optimal user experience and attractive design.",
+            "tags": [
+              "Angular",
+              "HTML",
+              "CSS",
+              "Bootstrap",
+              "JavaScript",
+              "Django",
+              "Mysql"
+            ]
+          }
+        ]
+      }
+    ],
+    "profile": {
+      "about": "About Me",
+      "text": {
+        "paragraph_1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto\n          cumque\n          a!\n          Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto,\n          sapiente..",
+        "paragraph_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore\n          nihil\n          magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!\n"
+      },
+      "programming": {
+        "programmingLanguages": "Programming Languages",
+        "databases": "Databases",
+        "technologiesTools": "Tools and Technologies",
+        "methodologies": "Methodologies",
+        "cloudTechnologies": "Cloud Technologies"
+      },
+      "libraries": "Libraries and Frameworks"
+    }
+  },
+  "projects": {
+    "github": {
+      "title": "Github Projects"
+    },
+    "others": {
+      "title": "Recent Published Projects",
+      "projects": [
+        {
+          "name": "Carbon Flama",
+          "html_url": "https://carbonflama.cl",
+          "description": "Website created for wholesale charcoal sales, currently under construction.\n",
+          "image": "carbon-flama.png"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "theme": {
+      "default": "Light",
+      "dark": "Dark"
     }
   }
-  
+
+
+}

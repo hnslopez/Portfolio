@@ -14,9 +14,12 @@ export class ProjectsComponent {
   projects: any[] = [];
 
   constructor(private sanitizer: DomSanitizer, private translate: TranslateService) {
+
+  }
+  ngOnInit(){
     this.data = this.getData();
     this.getProjects();
-  }
+  }	
 
   async getData() {
     const url = `https://api.github.com/users/hnslopez/repos`;

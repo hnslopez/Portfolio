@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" >
   <div class="col-12 col-sm-12 col-md-5 col-xl-4 px-2">
     <section class="row ">
 
@@ -57,12 +57,12 @@
     </section>
 
   </div>
-  <div class="col-12 col-sm-12 col-md-7 col-xl-8 px-2">
+  <div class="col-12 col-sm-12 col-md-7 col-xl-8 px-2" >
     <nz-list nzGrid>
-      <div nz-row [nzGutter]="[16, 8]">
-        <div nz-col [nzSpan]="24" class="gutter-row" *ngFor="let company of companies;let i = index">
+      <div nz-row [nzGutter]="[16, 8]" [@fadeAll]>
+        <div nz-col [nzSpan]="24" class="gutter-row" *ngFor="let company of companies;let i = index" >
           <app-card [title]="company.title" [id]="transformarId(company.title)">
-            <div nz-col *ngFor="let works of company.works; let lastWork = last ">
+            <div nz-col *ngFor="let works of company.works; let lastWork = last; let animation = index" >
               <nz-list-item>
                 <nz-list-item-meta class="mb-0">
                   <nz-list-item-meta-title>

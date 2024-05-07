@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { CdkVirtualScrollViewport } from "@angular/cdk/scrolling";
+import { trigger, transition, style, animate, sequence, keyframes, stagger, query } from '@angular/animations';
 
 
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  animations: [
+    trigger('fadeAll', [
+      transition('* => *', [
+        query(':enter', [
+          style({ opacity: 0 }),
+          stagger(1000, [
+            animate('1200ms', style({ opacity: 1 }))
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
 
 export class AboutComponent {
