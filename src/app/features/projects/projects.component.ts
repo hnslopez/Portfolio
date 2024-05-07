@@ -2,11 +2,20 @@ import { Component, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import axios from 'axios';
+import { trigger, transition, style, animate, sequence, keyframes, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('600ms ease-out', style({ opacity: 1 })),
+      ]),
+    ]),
+  ]
 })
 export class ProjectsComponent {
 
@@ -29,7 +38,6 @@ export class ProjectsComponent {
       const response = await axios.get(satinizeUrl!);
       let data = response.data;
       if (typeof data === 'object') {
-        console.log(data)
         return data;
       }
     } catch (error: any) {
@@ -44,7 +52,6 @@ export class ProjectsComponent {
       this.projects = projects.map(project => ({
         ...project
       }));
-      console.log(this.projects)
     });
   }
 }

@@ -13,12 +13,18 @@ import { trigger, transition, style, animate, sequence, keyframes, stagger, quer
       transition('* => *', [
         query(':enter', [
           style({ opacity: 0 }),
-          stagger(1000, [
+          stagger(700, [
             animate('1200ms', style({ opacity: 1 }))
           ])
         ], { optional: true })
       ])
-    ])
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('600ms ease-out', style({ opacity: 1 })),
+      ]),
+    ]),
   ]
 })
 

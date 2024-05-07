@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
+import { trigger, transition, style, animate, sequence, keyframes, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [trigger('fadeIn', [
+    transition(':enter', [
+      style({ opacity: 0 }),
+      animate('600ms ease-out', style({ opacity: 1 })),
+    ]),
+  ]),]
 })
 export class HomeComponent {
 

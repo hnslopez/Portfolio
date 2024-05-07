@@ -12,6 +12,9 @@
     "perfil": "Perfiles",
     "contact": "Contacto"
   },
+  "home":{
+    "button":"siguiente"
+  },
   "about": {
     "jobs": [
       {

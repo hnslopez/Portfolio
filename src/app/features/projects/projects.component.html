@@ -1,9 +1,9 @@
-<section class="mt-4">
+<section class="mt-4" >
     <nz-divider [nzText]="'projects.github.title' | translate | uppercase" nzOrientation="left"></nz-divider>
-    <div class="row d-flex">
-        <ng-container *ngFor="let project of data | async">
+    <div class="row d-flex overflow-auto" style="min-height: 415px;max-height: 415px;">
+        <ng-container *ngFor="let project of data | async" >
             <div class="col-12 col-md-4 col-xl-4 ps-1 pe-2 mb-2">
-                <app-card class="h-100" [title]="project.name" [footer]="true" [extra]="true">
+                <app-card class="h-100 " [title]="project.name" [footer]="true" [extra]="true"  @fadeIn>
                     <section description>
                         <p nz-typography nzEllipsis [nzEllipsisRows]="3">{{ project.description }}</p>
                         <div footer class="mt-auto right-col d-flex flex-nowrap overflow-auto scroll-bar">
@@ -26,8 +26,8 @@
 <section class="mt-4">
     <nz-divider [nzText]="'projects.others.title' | translate | uppercase" nzOrientation="left"></nz-divider>
     <div class="row d-flex">
-        <ng-container *ngFor="let project of projects">
-            <div class="col-12 col-md-4 col-xl-4 ps-1 pe-2 mb-2">
+        <ng-container *ngFor="let project of projects" >
+            <div class="col-12 col-md-4 col-xl-4 ps-1 pe-2 mb-2"  @fadeIn>
                 <app-card class="h-100" [title]="project.name" [imageUrl]="'/assets/image/'+project.image">
                     <ng-container description>
                         <p nz-typography nzEllipsis [nzEllipsisRows]="3">{{ project.description }}</p>
