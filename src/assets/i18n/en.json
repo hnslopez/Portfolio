@@ -12,9 +12,12 @@
     "perfil": "Profiles",
     "contact": "Contact"
   },
+
   "home":{
+    "paragraph_1":"Hello! I'm Hans López, a full-stack developer specializing in JavaScript (NodeJS).",
+    "paragraph_2":"My experience spans a wide range of applications and projects, from front-end development to the creation of supervised language models in the field of artificial intelligence. However, my main specialization is in backend development and API creation.",
     "button":"next"
-  },
+    },
   "about": {
     "jobs": [
       {
@@ -165,6 +168,10 @@
     "theme": {
       "default": "Light",
       "dark": "Dark"
+    },
+    "language": {
+      "title": "Language Changed",
+      "description": "The language has been successfully changed"
     }
   }
 

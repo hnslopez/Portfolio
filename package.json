@@ -24,6 +24,8 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@splinetool/runtime": "^1.0.81",
+    "@types/createjs": "^0.0.32",
+    "@types/gsap": "^3.0.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",

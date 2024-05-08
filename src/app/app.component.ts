@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { Router } from 'express';
 import { Application } from '@splinetool/runtime';
+import { filter, map } from 'rxjs';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit{
-  title = 'frontend';
+export class AppComponent implements OnInit {
+  title = 'Portafolio';
+  loading = true;
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private router: Router, private titleService: Title) {
     let defaultLenguage = localStorage.getItem('locale') || 'es';
 
 
@@ -20,16 +22,39 @@ export class AppComponent  implements OnInit{
       defaultLenguage = 'es';
       localStorage.setItem('locale', defaultLenguage);
     }
-
     translate.setDefaultLang(defaultLenguage || 'es');
   }
-  public switchLanguage(language: 'es' | 'en'): void {
+  public async switchLanguage(language: 'es' | 'en') {
     localStorage.setItem('locale', language);
-    this.translate.use(language);
+    return await this.translate.use(language);
+
   }
 
+  ngAfterViewInit(): void {
+    this.loading = false;
+
+  }
 
   ngOnInit(): void {
-}
+    this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => {
+        let route: ActivatedRoute = this.router.routerState.root;
+        let routeTitle = '';
+        while (route!.firstChild) {
+          route = route.firstChild;
+        }
+        if (route.snapshot.data['title']) {
+          routeTitle = route!.snapshot.data['title'];
+        }
+
+        return routeTitle;
+      })
+    ).subscribe((title: string) => {
+      if (title) {
+        this.titleService.setTitle(`Portfolio Hans López - ${title}`);
+      }
+    });
+  }
 
 }

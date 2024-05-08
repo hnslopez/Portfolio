@@ -21,6 +21,7 @@ export class ProjectsComponent {
 
   data: any = [];
   projects: any[] = [];
+  loading:boolean = true;
 
   constructor(private sanitizer: DomSanitizer, private translate: TranslateService) {
 
@@ -38,6 +39,7 @@ export class ProjectsComponent {
       const response = await axios.get(satinizeUrl!);
       let data = response.data;
       if (typeof data === 'object') {
+        this.loading = false;
         return data;
       }
     } catch (error: any) {

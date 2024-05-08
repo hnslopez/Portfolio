@@ -13,6 +13,8 @@
     "contact": "Contacto"
   },
   "home":{
+    "paragraph_1":"¡Hola!, soy Hans López, un desarrollador full-stack con especialización en JavaScript (Node.js).",
+    "paragraph_2":"Mi experiencia abarca una amplia gama de aplicaciones y proyectos, desde el desarrollo front-end hasta la creación de modelos de lenguaje supervisados en el ámbito de la inteligencia artificial. Sin embargo, mi principal especialización está en el desarrollo backend y la creación de APIs.",
     "button":"siguiente"
   },
   "about": {
@@ -165,6 +167,10 @@
     "theme": {
       "default": "Claro",
       "dark": "Oscuro"
-    }
+    },
+      "language": {
+        "title": "Idioma Cambiado",
+        "description": "El idioma ha sido cambiado exitosamente"
+      }    
   }
 }

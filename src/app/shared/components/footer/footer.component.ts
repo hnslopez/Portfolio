@@ -44,16 +44,21 @@ export class FooterComponent implements OnInit{
 
 
  async languageChange(params:any) {
-  this.app.switchLanguage(params);
-  
-  const notificactionTitle = this.translateService.instant('components.notification.changeLanguage.title');
-  const notificactionDescription = this.translateService.instant('components.notification.changeLanguage.description');
+  const language  = await this.app.switchLanguage(params);
 
-  await this.notification.create(
-    'success',
-    notificactionTitle,
-    notificactionDescription
-  );
+
+  language.subscribe((value:any)=>{ 
+
+
+    this.notification.blank(
+      value.settings.language.title,
+      value.settings.language.description
+    );
+
+   
+  })
+  
+
 }
 
 toggleTheme(): void {

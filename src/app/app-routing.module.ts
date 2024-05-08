@@ -5,10 +5,10 @@ import { AboutComponent } from './features/about/about.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, //default route
-  { path: 'home', component: HomeComponent },
-  { path:'about', component: AboutComponent},
-  { path:'projects', component: ProjectsComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: 'home', component: HomeComponent, data:{ title : 'Inicío'} },
+  { path:'about', component: AboutComponent,  data:{ title : 'Información'} },
+  { path:'projects', component: ProjectsComponent,  data:{ title : 'Proyectos'} },
   { path: '**', component: HomeComponent }
 
 ];

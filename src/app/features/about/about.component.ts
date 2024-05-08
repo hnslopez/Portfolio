@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { trigger, transition, style, animate, sequence, keyframes, stagger, query } from '@angular/animations';
+import { Subscription } from 'rxjs';
 
 
 
@@ -37,12 +38,8 @@ export class AboutComponent {
     textAlign: 'left'
   };
 
-  index = 1;
-
   tecnoKeys: string[];
-
-  positions:any = ['topLeft','top','topRight','bottomLeft','bottom','bottomRight']
-
+  positions: any = ['topLeft', 'top', 'topRight', 'bottomLeft', 'bottom', 'bottomRight']
   tecnologies: any = {
     "programmingLanguages": [
       {
@@ -119,12 +116,12 @@ export class AboutComponent {
             "icon": "fab fa-python"
           },
           {
-            "name":"Pandas",
-            "icon":"fab carbon--pandas"
+            "name": "Pandas",
+            "icon": "fab carbon--pandas"
           },
           {
-            "name":"Tensorflow",
-            "icon":"fab carbon--tensoflow"
+            "name": "Tensorflow",
+            "icon": "fab carbon--tensoflow"
           }
         ]
       },
@@ -235,21 +232,34 @@ export class AboutComponent {
       }
     ]
   }
-
-
-
-
+  private langChangeSubscription!: Subscription;
 
   constructor(private translate: TranslateService) {
 
     this.tecnoKeys = Object.keys(this.tecnologies);
+  }
 
+  ngOnInit(): void {
+    this.langChangeSubscription = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.changeLanguage();
+    });
+
+    this.changeLanguage();
+  }
+
+
+  changeLanguage(): void {
     this.translate.get('about.jobs').subscribe((companies: any[]) => {
       this.companies = companies.map(company => ({
         ...company
       }));
     });
   }
+
+  ngOnDestroy(): void {
+    this.langChangeSubscription.unsubscribe();
+  }
+
 
   transformarId(titulo: string): string {
     return titulo.replace(/\s/g, "-");

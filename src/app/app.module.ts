@@ -56,6 +56,9 @@ import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzBackTopModule } from 'ng-zorro-antd/back-top';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { CanvasComponentimplements } from './shared/components/canvas/canvas.component';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 registerLocaleData(en);
 
@@ -70,7 +73,8 @@ registerLocaleData(en);
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    TagComponent
+    TagComponent,
+    CanvasComponentimplements
 
   ],
   imports: [
@@ -119,7 +123,9 @@ registerLocaleData(en);
     NzAffixModule,
     NzCarouselModule,
     NzTimelineModule,
-    NzBackTopModule
+    NzBackTopModule,
+    NzSkeletonModule,
+    NzSpinModule
   ],
   providers: [AppInitializerProvider,
     { provide: NZ_I18N, useValue: en_US }
