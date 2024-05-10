@@ -1,4 +1,9 @@
 {
+  "data":{
+    "title":{
+      "portfolio":"Portafolio"
+    }
+  },
   "navbar": {
     "fullstack": "Desarrollador Fullstack",
     "home": "Inicio",
@@ -134,8 +139,8 @@
     "profile": {
       "about": "Acerca de mí",
       "text": {
-        "paragraph_1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto\n          cumque\n          a!\n          Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto,\n          sapiente..",
-        "paragraph_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore\n          nihil\n          magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!\n"
+        "paragraph_1": "💻 Soy un desarrollador Full Stack con experiencia en aplicaciones web y backend, especializado en tecnologías como Express, Angular y MongoDB. Graduado como Analista Programador e Ingenierío en Informática.\n",
+        "paragraph_2": " Con habilidades en modelamiento de bases de datos relacionales y no relacionales, API RESTful y frontend, he entregado proyectos exitosos como Freelance y brindado asesoramiento técnico como Profesor Ayudante en Duoc UC.\n"
       },
       "programming": {
         "programmingLanguages": "Lenguajes de programación",

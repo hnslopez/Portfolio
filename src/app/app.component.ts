@@ -51,9 +51,12 @@ export class AppComponent implements OnInit {
         return routeTitle;
       })
     ).subscribe((title: string) => {
-      if (title) {
-        this.titleService.setTitle(`Portfolio Hans López - ${title}`);
-      }
+
+          const titleKey = title || '';
+          this.translate.get('data.title.portfolio').subscribe((translatedTitle: string) => {
+            this.titleService.setTitle(`${translatedTitle} Hans López - ${titleKey}`);
+          });
+
     });
   }
 

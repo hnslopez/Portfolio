@@ -6,9 +6,9 @@ import { ProjectsComponent } from './features/projects/projects.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
-  { path: 'home', component: HomeComponent, data:{ title : 'Inicío'} },
-  { path:'about', component: AboutComponent,  data:{ title : 'Información'} },
-  { path:'projects', component: ProjectsComponent,  data:{ title : 'Proyectos'} },
+  { path: 'home', component: HomeComponent, data:{ title : 'home'} },
+  { path:'about', component: AboutComponent,  data:{ title : 'about'} },
+  { path:'projects', component: ProjectsComponent,  data:{ title : 'projects'} },
   { path: '**', component: HomeComponent }
 
 ];

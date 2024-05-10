@@ -14,8 +14,8 @@
 </header>
 
 <ng-template #navbarMobile>
-  <nz-affix class="toc-affix" [nzOffsetTop]="120">
-    <button nz-button nzType="default" (click)="open()" style="margin-bottom: 6px;">
+  <nz-affix class="toc-affix" [nzOffsetTop]="80" >
+    <button nz-button nzType="default" (click)="open()" style="height: 40px; width: 40px; border-left: 0px;">
       <span nz-icon [nzType]="isOpen() ? 'menu-unfold' : 'menu-fold'"></span>
     </button>
   </nz-affix>
@@ -24,7 +24,6 @@
   [nzClosable]="false"
   [nzVisible]="visible"
   nzPlacement="right"
-  nzTitle="Basic Drawer"
   (nzOnClose)="close()"
 >
   <ng-container *nzDrawerContent>
@@ -72,7 +71,7 @@
         </li>
       </ul>
     </li>
-    <button class="order-2" nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
+    <button class="order-2" nz-button  nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzType="default"
       style="margin-bottom: 6px; padding: 0 20px;">{{'navbar.cv_download.name' | translate | uppercase }}
     </button>
     <nz-dropdown-menu #menu="nzDropdownMenu">

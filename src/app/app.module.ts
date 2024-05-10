@@ -59,6 +59,7 @@ import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { CanvasComponentimplements } from './shared/components/canvas/canvas.component';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
 
 registerLocaleData(en);
 
@@ -125,7 +126,8 @@ registerLocaleData(en);
     NzTimelineModule,
     NzBackTopModule,
     NzSkeletonModule,
-    NzSpinModule
+    NzSpinModule,
+    NzAlertModule
   ],
   providers: [AppInitializerProvider,
     { provide: NZ_I18N, useValue: en_US }

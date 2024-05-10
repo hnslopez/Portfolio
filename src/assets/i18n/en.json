@@ -1,4 +1,9 @@
-{
+{ 
+ "data":{
+  "title":{
+    "portfolio":"Portfolio"
+  }
+},
   "navbar": {
     "fullstack": "Fullstack Developer",
     "home": "Home",
