@@ -10,8 +10,12 @@ import { trigger, transition, style, animate, sequence, keyframes, stagger, quer
       style({ opacity: 0 }),
       animate('600ms ease-out', style({ opacity: 1 })),
     ]),
-  ]),]
+  ]),
+
+]
 })
 export class HomeComponent {
+
+  
 
 }

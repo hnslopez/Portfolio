@@ -11,11 +11,37 @@
 
 }
 
+@text-color: fade(@principal-text-color, 85%);
+@text-color-dark: fade(@white, 85%);
+@text-color-secondary-dark: fade(@white, 65%);
+@text-color-secondary: fade(@principal-text-color, 45%);
+
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.ant-layout{
+  background: transparent;
+}
+
+em.ant-list-item-action-split.ng-star-inserted{
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+
+@layout-footer-background: transparent;
+
 
 html, body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#283139',GradientType=1 );
   background-attachment: fixed;
 
+}
+
+nz-card.ant-card.ant-card-bordered.ant-card-hoverable{
+  background: #0000001c;
 }
 
 .ant-card-head.ng-star-inserted{

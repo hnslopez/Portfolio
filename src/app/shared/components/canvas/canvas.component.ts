@@ -1,9 +1,18 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, Renderer2 } from '@angular/core';
+import { ThemeService } from 'src/app/theme.service';
+import { ThemeType } from '../../enum';
+import { Subscription } from 'rxjs';
 
 declare var createjs: any; // Declarar createjs como una variable global
 declare var TweenMax: any; // Declarar TweenMax como una variable global
 declare var Power1: any; // Declarar Power1 como una variable global
 declare var Cubic: any; // Declarar Cubic como una variable global
+
+enum ParticleSize {
+  small = 'small',
+  medium = 'medium',
+  large = 'large'
+}
 
 @Component({
   selector: 'app-canvas',
@@ -12,88 +21,103 @@ declare var Cubic: any; // Declarar Cubic como una variable global
 })
 export class CanvasComponentimplements implements OnInit, OnDestroy {
 
-  private totalWidth: number = window.innerWidth; 
-  private totalHeight: number = window.innerHeight; 
+  private totalWidth: number = window.innerWidth;
+  private totalHeight: number = window.innerHeight;
+  private theme = ThemeType.Dark;
+  private themeSubscription!: Subscription;
+
+
+  private particleColors = {
+    small: { dark: '#0cdbf3', default: '#373536' },
+    medium: { dark: '#6fd2f3', default: '#373536' },
+    large: { dark: '#93e9f3', default: '#373536' }
+  };
+
+  private lightColors = { dark: '#00264d', default: '#e8eff2'};
 
   private particleSettings = [
     {
-      id: "small",
+      id: ParticleSize.small,
       num: 300,
       fromX: 0,
       toX: this.totalWidth,
       ballwidth: 3,
       alphamax: 0.4,
       areaHeight: 0.5,
-      color: "#0cdbf3",
+      color: this.particleColors.small[this.theme],
       fill: false
     },
     {
-      id: "medium",
+      id: ParticleSize.medium,
       num: 100,
       fromX: 0,
       toX: this.totalWidth,
       ballwidth: 8,
       alphamax: 0.3,
       areaHeight: 1,
-      color: "#6fd2f3",
+      color: this.particleColors.medium[this.theme],
       fill: true
     },
     {
-      id: "large",
+      id: ParticleSize.large,
       num: 10,
       fromX: 0,
       toX: this.totalWidth,
       ballwidth: 15,
       alphamax: 0.2,
       areaHeight: 1,
-      color: "#93e9f3",
+      color: this.particleColors.large[this.theme],
       fill: true
     }
   ];
 
   private stage: any = null;
-  private particleArray: any[] = []; 
+  private particleArray: any[] = [];
   private lights: any[] = [
     {
-      ellipseWidth: 400,
-      ellipseHeight: 100,
-      alpha: 0.6,
+      ellipseWidth: 1000,
+      ellipseHeight: 300, 
+      alpha: 0.5, 
       offsetX: 0,
       offsetY: 0,
-      color: "#ff000020" // ff000020  131a2400
+      color: this.lightColors[this.theme],
     },
     {
-      ellipseWidth: 350,
-      ellipseHeight: 250,
-      alpha: 0.3,
+      ellipseWidth: 500,
+      ellipseHeight: 250, 
+      alpha: 0.3, 
       offsetX: -50,
       offsetY: 0,
-      color: "#131a2400"
+      color: this.lightColors[this.theme],
     },
     {
-      ellipseWidth: 100,
-      ellipseHeight: 80,
-      alpha: 0.2,
+      ellipseWidth: 200,
+      ellipseHeight: 160,
+      alpha: 0.2, 
       offsetX: 80,
       offsetY: -50,
-      color: "#131a2400"
+      color: this.lightColors[this.theme],
     }
   ];
+  
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private renderer: Renderer2, private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.initialize();
+    this.themeSubscription = this.themeService.getThemeChanged().subscribe(theme => {
 
+      this.updateTheme(theme);
+    });
   }
 
   ngOnDestroy(): void {
-    if (this.stage) {
-      createjs.Ticker.removeEventListener('tick', this.updateCanvas);
-      window.removeEventListener('resize', this.resizeCanvas);
-    }
+    createjs.Ticker.removeEventListener('tick', this.updateCanvas);
+    window.removeEventListener('resize', this.resizeCanvas);
+    // Desuscribirse del tema al destruir el componente
+    this.themeSubscription.unsubscribe();
   }
-  
+
 
   private initialize(): void {
     const canvas = this.elementRef.nativeElement.querySelector('canvas');
@@ -101,16 +125,16 @@ export class CanvasComponentimplements implements OnInit, OnDestroy {
 
     this.stage = new createjs.Stage(canvas);
 
-    createjs.Ticker.addEventListener('tick', this.updateCanvas.bind(this)); 
+    createjs.Ticker.addEventListener('tick', this.updateCanvas.bind(this));
 
     canvas.width = this.totalWidth;
     canvas.height = this.totalHeight;
 
-    
+
     window.addEventListener('resize', () => {
       this.resizeCanvas();
-      this.resizeParticles(); 
-    }); 
+      this.resizeParticles();
+    });
 
     this.drawBgLight();
     this.drawParticles();
@@ -333,6 +357,7 @@ export class CanvasComponentimplements implements OnInit, OnDestroy {
       ],
       0.6
     );
+
   }
 
   private animateBall(ball: any): void {
@@ -398,4 +423,46 @@ export class CanvasComponentimplements implements OnInit, OnDestroy {
   private range(min: number, max: number): number {
     return min + (max - min) * Math.random();
   }
+
+  private updateTheme(theme: ThemeType): void {
+    this.theme = theme;
+
+    if (!this.stage) return;
+
+    for (let i = 0, length = this.particleArray.length; i < length; i++) {
+      let circle = this.particleArray[i];
+
+      if (circle.graphics._fill) {
+        circle.graphics._fill.style = this.particleColors[circle.flag as 'medium' | 'small' | 'large'][this.theme];
+
+      } else if (circle.graphics._stroke) {
+
+        circle.graphics._stroke.style = this.particleColors[circle.flag as 'medium' | 'small' | 'large'][this.theme];
+      }
+      circle.cache(-50, -50, 100, 100); 
+
+    }
+
+    for (let j = 0, len = this.lights.length; j < len; j++) {
+      this.lights[j].elem.graphics.clear()
+        .beginFill(this.lightColors[this.theme])
+        .drawEllipse(
+          0,
+          0,
+          this.lights[j].ellipseWidth,
+          this.lights[j].ellipseHeight
+        );
+      this.lights[j].elem.cache(
+        -this.lights[j].ellipseWidth / 2,
+        -this.lights[j].ellipseHeight / 2,
+        this.lights[j].ellipseWidth,
+        this.lights[j].ellipseHeight
+      );
+    }
+
+
+ 
+  }
+
+
 }
