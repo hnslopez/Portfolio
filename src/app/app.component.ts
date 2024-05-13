@@ -8,7 +8,8 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
 })
 export class AppComponent implements OnInit {
   title = 'Portafolio';
@@ -31,8 +32,9 @@ export class AppComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.loading = false;
-
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
   }
 
   ngOnInit(): void {
