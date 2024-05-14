@@ -12,6 +12,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   
 })
 export class AppComponent implements OnInit {
+
   title = 'Portafolio';
   loading = true;
 
@@ -37,7 +38,12 @@ export class AppComponent implements OnInit {
     }, 2000);
   }
 
+
   ngOnInit(): void {
+
+    console.log( window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
       map(() => {
