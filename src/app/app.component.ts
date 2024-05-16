@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
+
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { Application } from '@splinetool/runtime';
@@ -16,11 +17,13 @@ export class AppComponent implements OnInit {
   title = 'Portafolio';
   loading = true;
 
-  constructor(public translate: TranslateService, private router: Router, private titleService: Title) {
+  constructor(public translate: TranslateService, private router: Router, private titleService: Title, @Inject(LOCALE_ID) private locale: string) {
     let defaultLenguage = localStorage.getItem('locale') || 'es';
+    console.log('Idioma del navegador:', this.locale);
 
 
     if (!['es', 'en'].includes(defaultLenguage)) {
+      
       defaultLenguage = 'es';
       localStorage.setItem('locale', defaultLenguage);
     }
@@ -41,7 +44,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log( window.matchMedia('(prefers-color-scheme: dark)').matches);
 
 
     this.router.events.pipe(
