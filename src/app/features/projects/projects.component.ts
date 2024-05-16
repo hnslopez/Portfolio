@@ -37,7 +37,7 @@ export class ProjectsComponent {
 
     try {
       const response = await axios.get(satinizeUrl!);
-      let data = response.data;
+      let data = response.data.reverse();
       if (typeof data === 'object') {
         this.loading = false;
         return data;
