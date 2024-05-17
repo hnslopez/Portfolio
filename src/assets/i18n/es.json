@@ -138,11 +138,11 @@
         }
       ],
       "profile": {
-        "about": "Acerca de mí",
-        "text": {
-          "paragraph_1": "💻 Soy un desarrollador Full Stack con experiencia en aplicaciones web y backend, especializado en tecnologías como Express, Angular y MongoDB. Graduado como Analista Programador e Ingeniero en Informática.",
-          "paragraph_2": "Tengo habilidades en modelado de bases de datos relacionales y no relacionales, API RESTful y frontend. He entregado proyectos exitosos como Freelance y brindado asesoramiento técnico como Profesor Asistente en Duoc UC."
-        },
+            "about": "Acerca de mí",
+            "text": {
+              "paragraph_1": "💻 Soy un desarrollador Full Stack con una sólida experiencia en el desarrollo de aplicaciones web y backend. Me especializo en tecnologías como Express, Angular y MongoDB, y estoy graduado como Analista Programador e Ingeniero en Informática.",
+              "paragraph_2": "Poseo habilidades avanzadas en el modelado de bases de datos tanto relacionales como no relacionales, desarrollo de API RESTful y frontend. He completado proyectos exitosos como freelancer y he brindado asesoramiento técnico como Profesor Asistente en Duoc UC, destacándome por mi capacidad para resolver problemas complejos."
+            },
         "programming": {
           "programmingLanguages": "Lenguajes de programación",
           "databases": "Bases de datos",
