@@ -22,136 +22,137 @@
     "paragraph_2":"Mi experiencia abarca una amplia gama de aplicaciones y proyectos, desde el desarrollo front-end hasta la creación de modelos de lenguaje supervisados en el ámbito de la inteligencia artificial. Sin embargo, mi principal especialización está en el desarrollo backend y la creación de APIs.",
     "button":"siguiente"
   },
-  "about": {
-    "jobs": [
-      {
-        "title": "ACTIONHUB - BANCOESTADO",
-        "works": [
-          {
-            "date": "Agosto 2023 - Diciembre 2023",
-            "title": "Desarrollador Fullstack",
-            "description": "Fui contratado para trabajar directamente en el desarrollo de una API integradora en el equipo de postventa con una duración de 5 meses. El equipo está especializado en el uso de Salesforce y creación de APIs/Microservicios bajo la metodología Scrum. Mi enfoque principal consistió en la creación y desarrollo del API Integradora, así como en la elaboración de varias APIs/Microservicios mediante el uso de Node.js y Express. Además, trabajé con tecnologías como MongoDB, Lightning Web Components y clases Apex de Salesforce.",
-            "tags": [
-              "Javascript",
-              "Node.js",
-              "Express",
-              "MongoDB",
-              "Salesforce",
-              "Scrum"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "DUOC UC",
-        "works": [
-          {
-            "date": "2023 - 2024",
-            "title": "Desarrollador Fullstack",
-            "description": "Lideré la creación de un sistema de chatbot escalable para abordar la falta de un método efectivo de respuesta a consultas estudiantiles. Este sistema, implementado con inteligencia artificial, facilita la interacción en lenguaje natural, optimizando la logística y la resolución de problemas. Las tecnologías clave empleadas incluyen NestJS, PostgreSQL, Angular, Django y procesamiento de lenguaje natural con TensorFlow.",
-            "tags": [
-              "NestJS",
-              "Progrestql",
-              "Angular",
-              "Django",
-              "TensorFlow"
-            ]
-          },
-          {
-            "date": "2022 - 2022",
-            "title": "Desarrollador Fullstack",
-            "description": "Lideré un proyecto de gestión de alumnos y actividades para el Centro de Innovación y Transferencia Tecnológica. Este proyecto se destacó por la implementación de la metodología Scrum, optimizando la colaboración y eficiencia del equipo. Utilicé NestJS y MongoDB para el backend, asegurando una gestión de datos robusta y escalable, mientras que para el frontend, apliqué Vue.js.",
-            "tags": [
-              "Scrum",
-              "NestJS",
-              "MongoDB",
-              "Vue.js"
-            ]
-          },
-          {
-            "date": "2020 - 2023",
-            "title": "Profesor asistente",
-            "description": "Durante tres años, desempeñé el rol de Profesor Asistente, impartiendo conocimientos en SQL, PL/SQL, Python y Java. En este período, también proporcioné asesoramiento técnico integral, abarcando dichos lenguajes de programación y extendiendo mi expertise a otros como JavaScript.",
-            "tags": [
-              "SQL",
-              "PL/SQL",
-              "Python",
-              "Java",
-              "JavaScript"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "BILBAO LABS",
-        "works": [
-          {
-            "date": "2021 - 2022",
-            "title": "Desarrollador Fullstack",
-            "description": "Fui responsable del desarrollo y optimización de sitios web, empleando tecnologías como PHP, Bootstrap y JavaScript. Mi enfoque se centró en reforzar la seguridad digital, trabajar de manera colaborativa en equipos multidisciplinarios, introducir innovadoras funcionalidades, y asegurar la resolución eficiente de problemas para mantener los sitios web al día con las últimas tendencias y actualizaciones.",
-            "tags": [
-              "PHP",
-              "Bootstrap",
-              "JavaScript",
-              "JQuery",
-              "Mysql",
-              "Scrum",
-              "HTML",
-              "CSS"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "FREELANCER",
-        "works": [
-          {
-            "date": "2017 - 2019",
-            "title": "Desarrollador Fullstack",
-            "description": "Desarrollé bots altamente personalizados para Discord, que ofrecían funcionalidades avanzadas tales como sistemas de permisos, gestión de música, administración de usuarios y un registro detallado de actividades. Estos bots mejoraron significativamente la experiencia de las comunidades.",
-            "tags": [
-              "Node.js",
-              "Mysql",
-              "Angular",
-              "Electron.js",
-              "HTML",
-              "CSS",
-              "Bootstrap"
-            ]
-          },
-          {
-            "date": "2017 - 2019",
-            "title": "Desarrollador Fullstack",
-            "description": "Desarrollé sitios web tanto estáticos y dinámicos, aplicando tecnologías como Angular, Express, NestJS, Django y Bootstrap. Ademas del desarrollo de aplicaciones utilizando Django y la implementación de interfaces intuitivas con Bootstrap, asegurando una experiencia de usuario óptima y un diseño atractivo.",
-            "tags": [
-              "Angular",
-              "HTML",
-              "CSS",
-              "Bootstrap",
-              "JavaScript",
-              "Django",
-              "Mysql"
-            ]
-          }
-        ]
+
+    "about": {
+      "jobs": [
+        {
+          "title": "ACTIONHUB - BANCOESTADO",
+          "works": [
+            {
+              "date": "Agosto 2023 - Diciembre 2023",
+              "title": "Desarrollador Fullstack",
+              "description": "Trabajé en el desarrollo de una API integradora en el equipo de postventa durante 5 meses. El equipo utilizaba Salesforce y se enfocaba en la creación de APIs/Microservicios bajo la metodología Scrum. Mi principal responsabilidad fue desarrollar la API Integradora y varias APIs/Microservicios usando Node.js y Express. También trabajé con tecnologías como MongoDB, Lightning Web Components y clases Apex de Salesforce.",
+              "tags": [
+                "JavaScript",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Salesforce",
+                "Scrum"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "DUOC UC",
+          "works": [
+            {
+              "date": "2023 - 2024",
+              "title": "Desarrollador Fullstack",
+              "description": "Lideré la creación de un sistema de chatbot escalable para mejorar la respuesta a consultas estudiantiles. Implementado con inteligencia artificial, el sistema facilita la interacción en lenguaje natural, optimizando la logística y resolución de problemas. Utilicé tecnologías como NestJS, PostgreSQL, Angular, Django y TensorFlow para el procesamiento de lenguaje natural.",
+              "tags": [
+                "NestJS",
+                "PostgreSQL",
+                "Angular",
+                "Django",
+                "TensorFlow"
+              ]
+            },
+            {
+              "date": "2022",
+              "title": "Desarrollador Fullstack",
+              "description": "Lideré un proyecto de gestión de alumnos y actividades para el Centro de Innovación y Transferencia Tecnológica. Utilizando la metodología Scrum, optimicé la colaboración y eficiencia del equipo. Empleé NestJS y MongoDB para el backend y Vue.js para el frontend.",
+              "tags": [
+                "Scrum",
+                "NestJS",
+                "MongoDB",
+                "Vue.js"
+              ]
+            },
+            {
+              "date": "2020 - 2023",
+              "title": "Profesor Asistente",
+              "description": "Durante tres años, impartí conocimientos en SQL, PL/SQL, Python y Java. También ofrecí asesoramiento técnico integral en estos lenguajes y otros como JavaScript.",
+              "tags": [
+                "SQL",
+                "PL/SQL",
+                "Python",
+                "Java",
+                "JavaScript"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "BILBAO LABS",
+          "works": [
+            {
+              "date": "2021 - 2022",
+              "title": "Desarrollador Fullstack",
+              "description": "Desarrollé y optimicé sitios web utilizando PHP, Bootstrap y JavaScript. Me enfoqué en reforzar la seguridad digital, trabajar en equipos multidisciplinarios, introducir funcionalidades innovadoras y resolver problemas para mantener los sitios web actualizados.",
+              "tags": [
+                "PHP",
+                "Bootstrap",
+                "JavaScript",
+                "jQuery",
+                "MySQL",
+                "Scrum",
+                "HTML",
+                "CSS"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FREELANCER",
+          "works": [
+            {
+              "date": "2017 - 2019",
+              "title": "Desarrollador Fullstack",
+              "description": "Desarrollé bots personalizados para Discord con funcionalidades avanzadas como sistemas de permisos, gestión de música, administración de usuarios y registro de actividades, mejorando significativamente la experiencia de las comunidades.",
+              "tags": [
+                "Node.js",
+                "MySQL",
+                "Angular",
+                "Electron.js",
+                "HTML",
+                "CSS",
+                "Bootstrap"
+              ]
+            },
+            {
+              "date": "2017 - 2019",
+              "title": "Desarrollador Fullstack",
+              "description": "Desarrollé sitios web estáticos y dinámicos utilizando tecnologías como Angular, Express, NestJS, Django y Bootstrap. También creé aplicaciones con Django e interfaces intuitivas con Bootstrap, asegurando una óptima experiencia de usuario y diseño atractivo.",
+              "tags": [
+                "Angular",
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "JavaScript",
+                "Django",
+                "MySQL"
+              ]
+            }
+          ]
+        }
+      ],
+      "profile": {
+        "about": "Acerca de mí",
+        "text": {
+          "paragraph_1": "💻 Soy un desarrollador Full Stack con experiencia en aplicaciones web y backend, especializado en tecnologías como Express, Angular y MongoDB. Graduado como Analista Programador e Ingeniero en Informática.",
+          "paragraph_2": "Tengo habilidades en modelado de bases de datos relacionales y no relacionales, API RESTful y frontend. He entregado proyectos exitosos como Freelance y brindado asesoramiento técnico como Profesor Asistente en Duoc UC."
+        },
+        "programming": {
+          "programmingLanguages": "Lenguajes de programación",
+          "databases": "Bases de datos",
+          "technologiesTools": "Herramientas y tecnologías",
+          "methodologies": "Metodologías",
+          "cloudTechnologies": "Tecnologías en la nube"
+        },
+        "libraries": "Librerías y Frameworks"
       }
-    ],
-    "profile": {
-      "about": "Acerca de mí",
-      "text": {
-        "paragraph_1": "💻 Soy un desarrollador Full Stack con experiencia en aplicaciones web y backend, especializado en tecnologías como Express, Angular y MongoDB. Graduado como Analista Programador e Ingenierío en Informática.\n",
-        "paragraph_2": " Con habilidades en modelamiento de bases de datos relacionales y no relacionales, API RESTful y frontend, he entregado proyectos exitosos como Freelance y brindado asesoramiento técnico como Profesor Ayudante en Duoc UC.\n"
-      },
-      "programming": {
-        "programmingLanguages": "Lenguajes de programación",
-        "databases": "Bases de datos",
-        "technologiesTools": "Herramientas y tecnologías",
-        "methodologies": "Metodologías",
-        "cloudTechnologies": "Tecnologías en la nube"
-      },
-      "libraries": "Librerías  y Frameworks"
-    }
-  },
+    },
   "projects": {
     "github": {
       "title": "Proyectos de Github"
