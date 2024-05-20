@@ -19,5 +19,5 @@
 Contacto
 Si tienes alguna pregunta o deseas conectarte conmigo, puedes encontrarme en:
 
-LinkedIn: https://www.linkedin.com/in/hnslopez/
-Correo Electrónico: hans.lopezaranda@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hnslopez/
+- Correo: hans.lopezaranda@gmail.com
