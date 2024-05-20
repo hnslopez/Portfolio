@@ -14,6 +14,7 @@ export class NavbarComponent{
   github: any;
   mail: any;
   fileUrl: any;
+  fileUrlDocx: any;
   visible = false;
   isMobile = false;
 
@@ -23,6 +24,8 @@ export class NavbarComponent{
     this.github = sanitizer.bypassSecurityTrustUrl('https://github.com/hnslopez');
     this.mail = sanitizer.bypassSecurityTrustUrl('mailto:hans.lopezaranda@gmail.com');
     this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl('.././assets/CV_HANS_LOPEZ_2024.pdf');
+    this.fileUrlDocx = this.sanitizer.bypassSecurityTrustResourceUrl('.././assets/Hans_López_CV_2024.docx');
+
   }
  
   ngOnInit() {

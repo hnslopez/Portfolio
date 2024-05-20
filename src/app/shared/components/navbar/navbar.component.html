@@ -83,7 +83,11 @@
           {{'navbar.cv_download.pdf' | translate | uppercase }}
         </a>
         </li>
-        <li nz-menu-item>{{'navbar.cv_download.docx' | translate | uppercase }}</li>
+        <li nz-menu-item>
+          <a [href]="fileUrl" [attr.download]="'Hans_López_CV_2024.docx'"  target="_blank" rel="noopener noreferrer">
+          {{'navbar.cv_download.docx' | translate | uppercase }}
+          </a>
+        </li>
       </ul>
     </nz-dropdown-menu>
   </ul>
