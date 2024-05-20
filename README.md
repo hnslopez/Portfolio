@@ -1,4 +1,4 @@
-#Portafolio
+##Portafolio
 
 ¡Bienvenido a mi portafolio! Este proyecto está diseñado para mostrar mis habilidades y experiencia en desarrollo web utilizando Angular, Ant Design y Bootstrap. Aquí encontrarás información sobre mí y una lista dinámica de mis proyectos en GitHub.
 
@@ -15,3 +15,9 @@
 - **Angular**: Framework frontend utilizado para la estructura y lógica de la aplicación.
 - **Ant Design**: Biblioteca de componentes de UI para React, adaptada para Angular.
 - **Bootstrap**: Framework CSS para diseñar páginas web responsivas.
+
+Contacto
+Si tienes alguna pregunta o deseas conectarte conmigo, puedes encontrarme en:
+
+LinkedIn: https://www.linkedin.com/in/hnslopez/
+Correo Electrónico: hans.lopezaranda@gmail.com
