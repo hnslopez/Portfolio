@@ -1,9 +1,9 @@
-{ 
- "data":{
-  "title":{
-    "portfolio":"Portfolio"
-  }
-},
+{
+  "data": {
+    "title": {
+      "portfolio": "Portfolio"
+    }
+  },
   "navbar": {
     "fullstack": "Fullstack Developer",
     "home": "Home",
@@ -17,12 +17,11 @@
     "perfil": "Profiles",
     "contact": "Contact"
   },
-
-  "home":{
-    "paragraph_1":"Hello! I'm Hans López, a full-stack developer specializing in JavaScript (NodeJS).",
-    "paragraph_2":"My experience spans a wide range of applications and projects, from front-end development to the creation of supervised language models in the field of artificial intelligence. However, my main specialization is in backend development and API creation.",
-    "button":"next"
-    },
+  "home": {
+    "paragraph_1": "Hello! I'm Hans López, a full-stack developer specializing in JavaScript (Node.js).",
+    "paragraph_2": "My experience spans a wide range of applications and projects, from front-end development to creating supervised language models in the field of artificial intelligence. However, my main specialization is in backend development and API creation.",
+    "button": "next"
+  },
   "about": {
     "jobs": [
       {
@@ -31,9 +30,9 @@
           {
             "date": "August 2023 - December 2023",
             "title": "Fullstack Developer",
-            "description": "I was hired to work directly on the development of an integrating API in the post-sale team for a duration of 5 months. The team specializes in using Salesforce and creating APIs/Microservices under the Scrum methodology. My main focus was on creating and developing the Integrating API, as well as developing various APIs/Microservices using Node.js and Express. Additionally, I worked with technologies like MongoDB, Lightning Web Components, and Salesforce Apex classes.",
+            "description": "I worked on developing an integrating API in the after-sales team for 5 months. The team used Salesforce and focused on creating APIs/Microservices under the Scrum methodology. My main responsibility was to develop the Integrating API and several APIs/Microservices using Node.js and Express. I also worked with technologies like MongoDB, Lightning Web Components, and Salesforce Apex classes.",
             "tags": [
-              "Javascript",
+              "JavaScript",
               "Node.js",
               "Express",
               "MongoDB",
@@ -49,7 +48,7 @@
           {
             "date": "2023 - 2024",
             "title": "Fullstack Developer",
-            "description": "I led the creation of a scalable chatbot system to address the lack of an effective method for student inquiries. This system, implemented with artificial intelligence, facilitates natural language interaction, optimizing logistics and problem-solving. Key technologies employed include NestJS, PostgreSQL, Angular, Django, and natural language processing with TensorFlow.",
+            "description": "Led the creation of a scalable chatbot system to improve response to student queries. Implemented with artificial intelligence, the system facilitates natural language interaction, optimizing logistics and problem-solving. I used technologies such as NestJS, PostgreSQL, Angular, Django, and TensorFlow for natural language processing.",
             "tags": [
               "NestJS",
               "PostgreSQL",
@@ -59,9 +58,9 @@
             ]
           },
           {
-            "date": "2022 - 2022",
+            "date": "2022",
             "title": "Fullstack Developer",
-            "description": "I led a student and activities management project for the Center for Innovation and Technological Transfer. This project stood out for the implementation of the Scrum methodology, optimizing team collaboration and efficiency. I used NestJS and MongoDB for the backend, ensuring robust and scalable data management, while for the frontend, I applied Vue.js.",
+            "description": "Led a student and activities management project for the Center for Innovation and Technology Transfer. Using the Scrum methodology, I optimized team collaboration and efficiency. I used NestJS and MongoDB for the backend and Vue.js for the frontend.",
             "tags": [
               "Scrum",
               "NestJS",
@@ -72,7 +71,7 @@
           {
             "date": "2020 - 2023",
             "title": "Assistant Professor",
-            "description": "For three years, I served as an Assistant Professor, teaching SQL, PL/SQL, Python, and Java. During this period, I also provided comprehensive technical guidance, covering these programming languages and extending my expertise to others like JavaScript.",
+            "description": "For three years, I taught SQL, PL/SQL, Python, and Java. I also provided comprehensive technical advice in these languages and others such as JavaScript.",
             "tags": [
               "SQL",
               "PL/SQL",
@@ -89,13 +88,13 @@
           {
             "date": "2021 - 2022",
             "title": "Fullstack Developer",
-            "description": "I was responsible for developing and optimizing websites, employing technologies like PHP, Bootstrap, and JavaScript. My focus was on strengthening digital security, working collaboratively in multidisciplinary teams, introducing innovative functionalities, and ensuring efficient problem resolution to keep websites up-to-date with the latest trends and updates.",
+            "description": "Developed and optimized websites using PHP, Bootstrap, and JavaScript. I focused on enhancing digital security, working in multidisciplinary teams, introducing innovative features, and solving problems to keep websites up-to-date.",
             "tags": [
               "PHP",
               "Bootstrap",
               "JavaScript",
-              "JQuery",
-              "Mysql",
+              "jQuery",
+              "MySQL",
               "Scrum",
               "HTML",
               "CSS"
@@ -109,10 +108,10 @@
           {
             "date": "2017 - 2019",
             "title": "Fullstack Developer",
-            "description": "I developed highly customized bots for Discord, offering advanced functionalities such as permission systems, music management, user administration, and detailed activity logging. These bots significantly enhanced community experiences.",
+            "description": "Developed custom Discord bots with advanced features such as permission systems, music management, user administration, and activity logging, significantly enhancing the community experience.",
             "tags": [
               "Node.js",
-              "Mysql",
+              "MySQL",
               "Angular",
               "Electron.js",
               "HTML",
@@ -123,7 +122,7 @@
           {
             "date": "2017 - 2019",
             "title": "Fullstack Developer",
-            "description": "I developed both static and dynamic websites, applying technologies like Angular, Express, NestJS, Django, and Bootstrap. In addition to developing applications using Django and implementing intuitive interfaces with Bootstrap, ensuring optimal user experience and attractive design.",
+            "description": "Developed static and dynamic websites using technologies such as Angular, Express, NestJS, Django, and Bootstrap. I also created applications with Django and intuitive interfaces with Bootstrap, ensuring an optimal user experience and attractive design.",
             "tags": [
               "Angular",
               "HTML",
@@ -131,7 +130,7 @@
               "Bootstrap",
               "JavaScript",
               "Django",
-              "Mysql"
+              "MySQL"
             ]
           }
         ]
@@ -140,13 +139,13 @@
     "profile": {
       "about": "About Me",
       "text": {
-        "paragraph_1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quisquam nobis architecto\n          cumque\n          a!\n          Quibusdam amet vero quo eius facilis autem, dolorum eum praesentium, saepe odio, cum voluptas! Iusto,\n          sapiente..",
-        "paragraph_2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At iure labore quo esse culpa itaque totam dolore\n          nihil\n          magni? Cupiditate facilis aperiam explicabo nisi officiis, est ab iure exercitationem architecto!\n"
+        "paragraph_1": "💻 I am a Full Stack developer with solid experience in web and backend application development. I specialize in technologies such as Express, Angular, and MongoDB, and I am a graduate in Programming Analysis and Computer Engineering.",
+        "paragraph_2": "I have advanced skills in modeling both relational and non-relational databases, developing RESTful APIs, and frontend development. I have completed successful projects as a freelancer and provided technical advice as an Assistant Professor at Duoc UC, standing out for my ability to solve complex problems."
       },
       "programming": {
         "programmingLanguages": "Programming Languages",
         "databases": "Databases",
-        "technologiesTools": "Tools and Technologies",
+        "technologiesTools": "Technologies and Tools",
         "methodologies": "Methodologies",
         "cloudTechnologies": "Cloud Technologies"
       },
@@ -155,7 +154,7 @@
   },
   "projects": {
     "github": {
-      "title": "Github Projects"
+      "title": "GitHub Projects"
     },
     "others": {
       "title": "Recent Published Projects",
@@ -163,7 +162,7 @@
         {
           "name": "Carbon Flama",
           "html_url": "https://carbonflama.cl",
-          "description": "Website created for wholesale charcoal sales, currently under construction.\n",
+          "description": "Website created for wholesale charcoal sales, currently under construction.",
           "image": "carbon-flama.png"
         }
       ]
@@ -179,6 +178,4 @@
       "description": "The language has been successfully changed"
     }
   }
-
-
 }
