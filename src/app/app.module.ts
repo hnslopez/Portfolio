@@ -37,7 +37,6 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { IconsProviderModule } from './icon-provider.module';
 import { AboutComponent } from './features/about/about.component';
-import { SkillsComponent } from './features/skills/skills.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -60,6 +59,8 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { CanvasComponentimplements } from './shared/components/canvas/canvas.component';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { CertificatesComponent } from './features/certificates/certificates.component';
+import { NzImageModule } from 'ng-zorro-antd/image';
 
 registerLocaleData(en);
 
@@ -68,7 +69,7 @@ registerLocaleData(en);
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SkillsComponent,
+    CertificatesComponent,
     ProjectsComponent,
     NavbarComponent,
     FooterComponent,
@@ -127,7 +128,8 @@ registerLocaleData(en);
     NzBackTopModule,
     NzSkeletonModule,
     NzSpinModule,
-    NzAlertModule
+    NzAlertModule,
+    NzImageModule
   ],
   providers: [AppInitializerProvider,
     { provide: NZ_I18N, useValue: en_US }

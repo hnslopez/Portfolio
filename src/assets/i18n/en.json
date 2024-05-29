@@ -12,7 +12,9 @@
     "cv_download": {
       "name": "Download CV",
       "pdf": "PDF Format",
-      "docx": "DOCX Format"
+      "docx": "DOCX Format",
+      "txt": "TXT Format"
+
     },
     "perfil": "Profiles",
     "contact": "Contact"
@@ -168,6 +170,15 @@
       ]
     }
   },
+  "certificates": {
+    "badges": {
+      "title": "My Badges"
+    },
+    "certificates": {
+      "title": "My Certifications"
+    },
+    "view_more": "View More"
+  },  
   "settings": {
     "theme": {
       "default": "Light",

@@ -1,0 +1,15 @@
+.image-container {
+    width: 100%; /* Ajusta según tu diseño */
+    height: auto;
+    overflow: hidden; /* Oculta los bordes de la imagen al hacer zoom */
+    position: relative;
+  }
+  
+  img {
+    display: block;
+    width: 100%; /* Asegura que la imagen ocupe el contenedor completo */
+    height: auto;
+    transform-origin: center center;
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+  }
+  

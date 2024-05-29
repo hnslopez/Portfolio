@@ -7,7 +7,11 @@
     <ng-content></ng-content>
 
     <ng-template #coverTemplate>
-      <img nz-image  *ngIf ="imageUrl"  alt="{{ alt }}" [src]="imageUrl" />
+      <div class="image-container" *ngIf ="imageUrl">
+        <img  [ngStyle]="{'transform': 'scale(' + zoomImage + ')'}"  *ngIf ="!preview"  alt="{{ alt }}" [src]="imageUrl" />
+        <img nz-image [ngStyle]="{'transform': 'scale(' + zoomImage + ')'}"  *ngIf ="preview"  alt="{{ alt }}" [nzSrc]="imageUrl" />
+
+      </div>
     </ng-template>
   </nz-card>
 

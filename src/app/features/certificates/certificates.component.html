@@ -1,0 +1,39 @@
+<section class="mt-4">
+    <nz-divider [nzText]="'certificates.certificates.title' | translate | uppercase" nzOrientation="left"></nz-divider>
+    <div class="row d-flex">
+      <ng-container *ngFor="let badge of certificates">
+        <div class="col-12 col-md-3 col-xl-3 ps-1 pe-2 mb-2">
+          <app-card class="h-100 text-center"  [title]="badge.name" [imageUrl]="'/assets/image/' + badge.image" [preview]="true" [zoomImage]="1.05">
+            <ng-container description>
+              <p  nz-typography nzEllipsis [nzEllipsisRows]="3" >{{ badge.description }}</p>
+            </ng-container>
+            <ng-container action>
+              <a class="d-flex justify-content-center align-items-center" target="_blank" [href]="getSanitizedUrl(badge.url)">
+                <span class="me-1">{{ 'certificates.view_more' | translate | uppercase }}</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            </ng-container>
+          </app-card>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+  
+<section class="mt-4">
+  <nz-divider [nzText]="'certificates.badges.title' | translate | uppercase" nzOrientation="left"></nz-divider>
+  <div class="row d-flex">
+    <ng-container *ngFor="let badge of badges">
+      <div class="col-12 col-md-3 col-xl-3 ps-1 pe-2 mb-2">
+        <app-card class="h-100 text-center"  [title]="badge.name" [imageUrl]="'/assets/image/' + badge.image" [zoomImage]="1.05">
+          <ng-container description>
+            <p  nz-typography nzEllipsis [nzEllipsisRows]="3" >{{ badge.description }}</p>
+          </ng-container>
+          <ng-container action>
+            <a class="d-flex justify-content-center align-items-center" target="_blank" [href]="getSanitizedUrl(badge.url)">
+                <span class="me-1">{{ 'certificates.view_more' | translate | uppercase }}</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </ng-container>
+        </app-card>
+      </div>
+    </ng-container>
+  </div>
+</section>

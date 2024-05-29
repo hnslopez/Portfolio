@@ -55,6 +55,12 @@
         {{'navbar.projects' | translate | uppercase }}
       </a>
     </li>
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['certificates']">
+        <i class="fa fa-certificate"></i>
+        {{'navbar.certificates' | translate | uppercase }}
+      </a>
+    </li>
 
     <li nz-submenu [nzTitle]="'navbar.perfil' | translate | uppercase" nzIcon="mail" nzPlacement="bottomRight">
       <ul>
@@ -77,15 +83,20 @@
     <nz-dropdown-menu #menu="nzDropdownMenu">
       <ul nz-menu>
         <li nz-menu-item>
-          <a [href]="fileUrl" [attr.download]="'CV_HANS_LOPEZ_2024.pdf'"  target="_blank" rel="noopener noreferrer">
+          <a [href]="fileUrl" [attr.download]="'CV_Hans_López_2024_Mayo.pdf'"  target="_blank" rel="noopener noreferrer">
       
 
           {{'navbar.cv_download.pdf' | translate | uppercase }}
         </a>
         </li>
         <li nz-menu-item>
-          <a [href]="fileUrl" [attr.download]="'Hans_López_CV_2024.docx'"  target="_blank" rel="noopener noreferrer">
+          <a [href]="fileUrlDocx" [attr.download]="'CV_Hans_López_2024_Mayo.docx'"  target="_blank" rel="noopener noreferrer">
           {{'navbar.cv_download.docx' | translate | uppercase }}
+          </a>
+        </li>
+        <li nz-menu-item>
+          <a [href]="fileUrltxt" [attr.download]="'CV_Hans_López_2024_Mayo.txt'"  target="_blank" rel="noopener noreferrer">
+          {{'navbar.cv_download.txt' | translate | uppercase }}
           </a>
         </li>
       </ul>

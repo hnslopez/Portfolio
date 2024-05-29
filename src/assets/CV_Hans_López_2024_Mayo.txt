@@ -1,0 +1,106 @@
+﻿Hans Angelo López Aranda
+hans.lopezaranda@gmail.com | +56 9 7977 9167 | LinkedIn | Portafolio
+
+
+Programador Full-Stack con experiencia desde 2017 en desarrollo de aplicaciones web y APIs. Experiencia significativa en desarrollo de Back-End y conocimientos amplios en Front-End. Trabajo previo en proyectos relevantes para el sector financiero y educativo, y experiencia como freelancer y profesor asistente.
+
+
+
+
+Educación 
+Duoc UC                                                                                            Melipilla, Chile
+Ingenieria en informatica                                                                         03/2020 - 12/2023
+
+
+Duoc UC                                                                                                      Melipilla, Chile
+Analista programador                                                                         03/2020 - 06/2022
+
+
+Experiencia
+ACTIONHUB | Bancoestado                                                                                    Remoto, Chile
+Desarrollador Full-Stack                                                                                08/2023 - 12/2023
+* Desarrollo de una API integradora en el equipo de postventa.
+* Creación de APIs y microservicios utilizando Node.js y Express.
+* Trabajo con MongoDB, Postman, Lightning Web Components y clases Apex de Salesforce.
+* Metodología Scrum.
+
+
+DUOC UC                                                                                                Melipilla, Chile
+Desarrollador Full-Stack                                                                              04/2020 - 06/2022
+* Desarrollo de proyecto utilizando NestJS, MongoDB y Vue.js.
+* Ejercí como profesor asistente en SQL, PL/SQL, Python y Java.
+* Brindé asesoramiento técnico en lenguajes de programación y herramientas.
+
+
+Bilbao Labs                                                                                                 Remoto, Chile
+Desarrollador Full-Stack                                                                              01/2021 - 01/2022
+* Desarrollo y mejora de páginas web utilizando PHP, Bootstrap y JavaScript.
+* Fortalecimiento de la seguridad en línea.
+* Colaboración en equipos para implementar nuevas funcionalidades.
+* Resolución de problemas y mantenimiento de páginas web actualizadas.
+
+
+Riot Games                                                                                                Remoto, Chile
+Voluntariado                                                                                              02/2016 - 06/2020
+* Soporte técnico a la comunidad de jugadores.
+* Respuesta a preguntas sobre el juego y reporte de errores en la plataforma web.
+
+
+Freelancer                                                                                                 Remoto, Chile
+Desarrollador                                                                                                    2017 - 2019
+Desarrollo y mejora de páginas web con Angular, Express, NestJS, Django, Bootstrap, PHP y JavaScript.
+* Creación de bots personalizados para Discord.
+* Desarrollo de aplicaciones móviles con Ionic y Angular.
+* Creación de aplicaciones de escritorio con Electronjs.
+
+
+
+
+Cursos y Actividades
+
+
+Google Cloud                                                                                                     Remoto, Chile
+Prepare Data for Looker Dashboards and Reports                                                                04/2023
+
+
+Google Cloud                                                                                                     Remoto, Chile
+BigQuery for Data Warehousing                                                                                05/2023
+
+
+Google Cloud                                                                                                     Remoto, Chile
+Google Cloud Essentials                                                                                        05/2023
+
+
+HackerRank                                                                                                     Remoto, Chile
+Python, NodeJs, SQL, API REST, Angular, Javascript                                                        07/2022
+
+
+SCRUMstudy                                                                                                    Melipilla, Chile
+Scrum Fundamentals Certified                                                                                    06/2022
+
+
+
+
+Habilidades
+Lenguajes de Programación
+JavaScript, TypeScript, Python 3, PL/SQL, PHP, Java
+
+
+Base de Datos
+MySQL, Oracle, MongoDB, SQL Server
+
+
+Frameworks y Librerías
+NestJS, Angular, Django, Express, Ionic, NG-ZORRO, Bootstrap, Pandas
+
+
+Entornos y Herramientas
+Visual Studio Code, Eclipse, GitHub, Google Cloud Platform (GCP), API REST, JQuery, JWT, Testing (Jest), Postman, Power BI, Looker, Salesforce
+
+
+Metodologías
+Scrum, Kanban, Metodologías clásicas, CRISP-DM
+
+
+Lenguajes
+Español: Nativo,  Inglés: intermedio (B1).
