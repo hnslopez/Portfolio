@@ -13,7 +13,7 @@
 
 @layout-footer-background: transparent;
 
-
+@border-color-split: fade(@primary-color, 70%);
 //@component-background: fade(#142c29, 70%);
 
 
@@ -21,3 +21,7 @@ nz-card.ant-card.ant-card-bordered.ant-card-hoverable{
     background: #00000007;
   }
  
+
+  .ant-tag-has-color, .ant-tag-has-color a, .ant-tag-has-color a:hover, .ant-tag-has-color .anticon-close, .ant-tag-has-color .anticon-close:hover{
+    color: @primary-color!important;
+  }

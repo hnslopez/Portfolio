@@ -1,11 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-certificates',
   templateUrl: './certificates.component.html',
-  styleUrls: ['./certificates.component.css']
+  styleUrls: ['./certificates.component.css'],
+  animations: [
+    trigger('fadeAll', [
+      transition('* => *', [
+        query(':enter', [
+          style({ opacity: 0 }),
+          stagger(700, [
+            animate('1200ms', style({ opacity: 1 }))
+          ])
+        ], { optional: true })
+      ])
+    ]),
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('600ms ease-out', style({ opacity: 1 })),
+      ]),
+    ]),
+  ]
 })
 export class CertificatesComponent implements OnInit {
 
